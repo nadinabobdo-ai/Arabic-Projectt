@@ -352,7 +352,7 @@
         </div>
     </section>
 	
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -371,21 +371,21 @@
 </head>
 <body class="bg-slate-100 text-slate-900 min-h-screen">
 
-    <div id="selectionScreen" class="flex items-center justify-center min-h-screen p-4 bg-gradient-to-br from-indigo-500 to-purple-600">
+    <div id="selectionScreen" class="flex items-center justify-center min-h-screen p-4 bg-gradient-to-br from-indigo-600 to-purple-700">
         <div class="bg-white p-10 rounded-[3rem] shadow-2xl w-full max-w-md text-center border-b-[12px] border-indigo-900">
             <div class="mb-6">
                 <span class="text-6xl">🔬</span>
                 <h1 class="text-3xl font-bold text-slate-800 mt-4">عقولٌ تصنع</h1>
-                <p class="text-slate-400 font-medium">نظام التحليل السيكومتري للأفكار</p>
+                <p class="text-slate-400 font-medium italic">رؤية أعمق.. لإنسان أفضل.</p>
             </div>
             
             <div class="space-y-6">
-                <select id="roomNumber" class="w-full p-4 bg-slate-50 border-2 rounded-2xl font-bold text-indigo-600 outline-none focus:ring-2 ring-indigo-500 transition-all">
-                    <script>for(let i=1; i<=10; i++) document.write(`<option value="${i}">مختبر رقم ${i}</option>`)</script>
+                <select id="roomNumber" class="w-full p-4 bg-slate-50 border-2 rounded-2xl font-bold text-indigo-600 outline-none focus:ring-2 ring-indigo-500">
+                    <script>for(let i=1; i<=15; i++) document.write(`<option value="${i}">مختبر رقم ${i}</option>`);</script>
                 </select>
                 <div class="grid gap-4">
-                    <button onclick="enterSystem('teacher')" class="py-5 bg-indigo-600 text-white rounded-2xl font-bold text-xl hover:bg-indigo-700 active:scale-95 transition-all shadow-lg">دخول المعلمة (المحلل) 👩‍🔬</button>
-                    <button onclick="enterSystem('student')" class="py-5 bg-emerald-500 text-white rounded-2xl font-bold text-xl hover:bg-emerald-600 active:scale-95 transition-all shadow-lg">دخول الطالبة (المبتكرة) 🎓</button>
+                    <button onclick="checkTeacherAuth()" class="py-5 bg-indigo-600 text-white rounded-2xl font-bold text-xl hover:bg-indigo-700 shadow-lg active:scale-95 transition-all">دخول المعلمة 👩‍🔬</button>
+                    <button onclick="enterSystem('student')" class="py-5 bg-emerald-500 text-white rounded-2xl font-bold text-xl hover:bg-emerald-600 shadow-lg active:scale-95 transition-all">دخول الطالبة 🎓</button>
                 </div>
             </div>
         </div>
@@ -394,45 +394,42 @@
     <div id="teacherPanel" class="hidden p-4 lg:p-8 max-w-7xl mx-auto space-y-6">
         <header class="flex flex-col md:flex-row justify-between items-center glass-card p-6 rounded-[2.5rem] shadow-xl border border-white/20">
             <div class="flex items-center gap-4">
-                <button onclick="location.reload()" class="bg-slate-200 text-slate-700 px-4 py-2 rounded-xl font-bold hover:bg-slate-300 transition-all">← خروج</button>
-                <h2 class="text-2xl font-bold text-indigo-950 underline decoration-indigo-500">غرفة التحليل: <span id="tRoomId"></span></h2>
+                <button onclick="location.reload()" class="bg-slate-200 text-slate-700 px-4 py-2 rounded-xl font-bold hover:bg-slate-300">← خروج</button>
+                <h2 class="text-2xl font-bold text-indigo-950 underline decoration-indigo-500">مختبر التحليل: <span id="tRoomId"></span></h2>
             </div>
-            <button onclick="clearCurrentRoom()" class="bg-red-100 text-red-600 px-6 py-3 rounded-2xl font-bold hover:bg-red-200 transition-all shadow-sm">تصفير بيانات الغرفة الحالية فقط 🗑️</button>
+            <button onclick="clearCurrentRoom()" class="bg-red-100 text-red-600 px-6 py-3 rounded-2xl font-bold hover:bg-red-200">تصفير المختبر 🗑️</button>
         </header>
 
         <main class="grid grid-cols-1 lg:grid-cols-12 gap-6">
             <section class="lg:col-span-4 space-y-6">
                 <div class="glass-card p-6 rounded-[2rem] shadow-sm border-t-8 border-indigo-600">
-                    <h3 class="font-bold text-lg mb-4 text-indigo-900">طرح تحدي علمي/رياضي</h3>
-                    <textarea id="teacherQ" class="w-full p-4 bg-slate-50 border rounded-2xl h-32 mb-4 text-right outline-none focus:ring-2 ring-indigo-500 transition-all" placeholder="مثال: اشرحي عملية التحليل الكهربائي للماء..."></textarea>
-                    <button onclick="updateQuestion()" class="w-full bg-indigo-600 text-white py-4 rounded-xl font-bold shadow-lg">نشر التحدي للفصل 📡</button>
+                    <h3 class="font-bold text-lg mb-4 text-indigo-900 italic">طرح تحدي ومفتاح الإجابة</h3>
+                    <textarea id="teacherQ" class="w-full p-4 bg-slate-50 border rounded-2xl h-24 mb-3 text-right outline-none" placeholder="اكتبي السؤال هنا..."></textarea>
+                    <textarea id="modelAns" class="w-full p-4 bg-emerald-50 border border-emerald-200 rounded-2xl h-24 mb-4 text-right outline-none" placeholder="الكلمات المفتاحية للتصحيح التلقائي..."></textarea>
+                    <button onclick="updateQuestion()" class="w-full bg-indigo-600 text-white py-4 rounded-xl font-bold shadow-lg">نشر للفصل 📡</button>
                 </div>
                 <div class="glass-card p-6 rounded-[2rem] shadow-sm h-72">
-                    <h3 class="font-bold text-indigo-900 mb-2">منحنى الأداء</h3>
+                    <h3 class="font-bold text-indigo-900 mb-2 italic text-center">توزيع الدرجات</h3>
                     <canvas id="gradeChart"></canvas>
                 </div>
             </section>
 
             <section class="lg:col-span-8 glass-card p-6 rounded-[2rem] shadow-sm min-h-[600px] flex flex-col">
                 <div class="flex justify-between items-center mb-6 border-b pb-4">
-                    <h3 class="font-bold text-xl text-indigo-950">مجهر تحليل النصوص الرقمي</h3>
-                    <span id="subsCount" class="bg-indigo-100 text-indigo-600 px-4 py-1 rounded-full text-xs font-bold">0 مشاركة</span>
+                    <h3 class="font-bold text-xl text-indigo-950 italic">مجهر تحليل النصوص الرقمي 🧪</h3>
+                    <span id="subsCount" class="bg-indigo-100 text-indigo-600 px-4 py-1 rounded-full text-xs font-bold italic">0 مشاركة</span>
                 </div>
-                <div id="subsList" class="space-y-4 flex-1 overflow-y-auto">
-                    </div>
+                <div id="subsList" class="space-y-4 flex-1 overflow-y-auto"></div>
             </section>
         </main>
     </div>
 
     <div id="studentPanel" class="hidden p-6 max-w-2xl mx-auto min-h-screen flex items-center">
         <div class="bg-white p-10 rounded-[3.5rem] shadow-2xl w-full text-center border-t-[12px] border-emerald-500">
-            <div class="mb-8">
-                <span class="text-5xl">📝</span>
-                <h2 id="activeQ" class="text-2xl font-bold text-slate-800 mt-6 leading-relaxed bg-slate-50 p-6 rounded-3xl italic">بانتظار التحدي من المعلمة...</h2>
-            </div>
+            <h2 id="activeQ" class="text-2xl font-bold text-slate-800 mb-8 leading-relaxed bg-slate-50 p-6 rounded-3xl italic">بانتظار المعلمة...</h2>
             <div class="space-y-4">
                 <input id="sName" type="text" placeholder="اسمك الكامل" class="w-full p-5 bg-slate-50 border-2 rounded-2xl text-right font-bold outline-none focus:border-emerald-500 transition-all">
-                <textarea id="sAnswer" class="w-full p-5 bg-slate-50 border-2 rounded-2xl h-48 text-right outline-none focus:border-emerald-500 transition-all" placeholder="اكتبي استنتاجك العلمي أو الرياضي هنا..."></textarea>
+                <textarea id="sAnswer" class="w-full p-5 bg-slate-50 border-2 rounded-2xl h-48 text-right outline-none focus:border-emerald-500 transition-all" placeholder="اكتبي استنتاجك العلمي هنا..."></textarea>
                 <button onclick="submitAnswer()" class="w-full bg-emerald-500 text-white py-5 rounded-2xl font-bold text-xl shadow-xl active:scale-95 transition-all">إرسال التحليل للمعلمة 📩</button>
             </div>
         </div>
@@ -442,105 +439,114 @@
 let currentRoomKey = "";
 let chartInstance = null;
 
-// محرك التحليل البنيوي (Structural Intelligence Engine)
+// محرك الكشف البنيوي المطور (AI Structural Detection Engine)
 function deepAnalyze(text) {
-    if (!text || text.length < 20) return { label: "بيان غير مكتمل", color: "text-slate-400", bg: "bg-slate-50", isAI: false };
-
-    let aiPoints = 0;
+    if (!text || text.length < 15) return { label: "بيان موجز", color: "text-slate-400", bg: "bg-slate-50", isAI: false };
     
-    // 1. كشف الـ Academic Signature (البرود العلمي)
-    const academicTerms = ["تتمثل في", "بناءً على المعطيات", "القيمة الناتجة", "نستنتج أن العملية", "يعتبر العنصر"];
-    academicTerms.forEach(t => { if (text.includes(t)) aiPoints += 15; });
+    let aiScore = 0;
 
-    // 2. كشف الـ AI Apostrophe والتنظيم الهندسي
-    // الذكاء الاصطناعي يضع ":" للشرح بانتظام مريب
-    if (text.includes(":") || text.includes("- ")) aiPoints += 20;
+    // 1. كشف البصمة التقنية (الفاصلة العلوية والمطّات المستقيمة)
+    if (text.includes("'") || text.includes('"') || text.includes(" — ")) aiScore += 35;
 
-    // 3. كشف الـ Lexical Density (الكثافة اللغوية)
-    const words = text.trim().split(/\s+/);
-    const unique = new Set(words).size;
-    const density = unique / words.length;
-    if (density > 0.85) aiPoints += 20; // الـ AI لا يستخدم "حشو" بشري
+    // 2. كشف الفراغات المثالية (المسافة بعد الفاصلة دائماً)
+    const spacingPattern = /،\s[^\s]/g; // فاصلة متبوعة بمسافة واحدة فقط ثم حرف
+    if ((text.match(spacingPattern) || []).length >= 2) aiScore += 20;
 
-    // 4. كشف غياب الذاتية (Subjectivity Gap)
-    // الطالب البشري يميل لاستخدام "أنا"، "لقيت"، "شفت"، "حسيت"
-    const personalTouch = ["أنا", "لقيت", "شفت", "اعتقد", "لاحظنا", "بتاعتنا"];
-    const hasPersonal = personalTouch.some(p => text.includes(p));
-    if (!hasPersonal) aiPoints += 25;
+    // 3. كشف الروابط الأكاديمية المكررة
+    const markers = ["علاوة على ذلك", "بالإضافة إلى ذلك", "من ناحية أخرى", "بناءً على المعطيات", "في الختام"];
+    markers.forEach(m => { if (text.includes(m)) aiScore += 25; });
 
-    // 5. كشف علامات الترقيم الاحترافية (AI Punctuation)
-    const punctuationCheck = (text.match(/،\s/g) || []).length;
-    if (punctuationCheck >= 2) aiPoints += 15;
+    // 4. كشف نمط "الثلاثيات" (صفة، صفة، وصفة)
+    const triplePattern = /[\u0600-\u06FF]+،\s[\u0600-\u06FF]+،\sو[\u0600-\u06FF]+/g;
+    if (triplePattern.test(text)) aiScore += 30;
 
-    // التصنيف النهائي
-    if (aiPoints >= 60) return { label: "ذكاء اصطناعي محتمل (نظامي) 🤖", color: "text-red-600", bg: "bg-red-50", isAI: true };
-    if (aiPoints >= 35) return { label: "نص أكاديمي مرتب 🔍", color: "text-blue-600", bg: "bg-blue-50", isAI: false };
+    // 5. غياب الذاتية (Subjectivity Gap)
+    const personalTerms = ["أنا", "لقيت", "شفت", "اعتقد", "لاحظت", "وجهة نظري"];
+    const hasPersonal = personalTerms.some(p => text.includes(p));
+    if (!hasPersonal && text.length > 50) aiScore += 20;
+
+    // النتيجة النهائية
+    if (aiScore >= 65) return { label: "ذكاء اصطناعي محتمل 🤖", color: "text-red-600", bg: "bg-red-50", isAI: true };
+    if (aiScore >= 35) return { label: "نص أكاديمي مرتب 🔍", color: "text-indigo-600", bg: "bg-indigo-50", isAI: false };
     return { label: "بصمة بشرية تلقائية 👤", color: "text-emerald-600", bg: "bg-emerald-50", isAI: false };
+}
+
+function checkTeacherAuth() {
+    const roomNum = document.getElementById('roomNumber').value;
+    const correctCode = parseInt(roomNum) + 100;
+    const userCode = prompt(`مرحباً أيتها المحللة. رمز التحقق للمختبر ${roomNum}:`);
+    if (userCode == correctCode) enterSystem('teacher');
+    else if (userCode !== null) alert("الرمز غير صحيح!");
 }
 
 function enterSystem(role) {
     const num = document.getElementById('roomNumber').value;
-    currentRoomKey = "FINAL_ANALYSIS_ROOM_" + num;
+    currentRoomKey = "ANALYSIS_V5_ROOM_" + num;
     document.getElementById('tRoomId').innerText = num;
     document.getElementById('selectionScreen').classList.add('hidden');
     document.getElementById(role + 'Panel').classList.remove('hidden');
-    
-    // مزامنة كل ثانية واحدة
     setInterval(syncData, 1000);
 }
 
+function autoGrade(studentAns, modelAns) {
+    if (!modelAns || modelAns.length < 3) return 0;
+    const sText = studentAns.toLowerCase();
+    const mWords = modelAns.toLowerCase().split(/[\s،,]+/);
+    let matches = 0;
+    mWords.forEach(word => { if (sText.includes(word.trim()) && word.length > 1) matches++; });
+    return Math.min(Math.round((matches / mWords.length) * 10) + 1, 10);
+}
+
 function syncData() {
-    const data = JSON.parse(localStorage.getItem(currentRoomKey) || '{"question":"بانتظار السؤال...","subs":[]}');
+    const data = JSON.parse(localStorage.getItem(currentRoomKey) || '{"question":"بانتظار السؤال...","model":"","subs":[]}');
     const qEl = document.getElementById('activeQ');
-    if (qEl && qEl.innerText !== data.question) qEl.innerText = data.question;
+    if (qEl) qEl.innerText = data.question;
 
     const list = document.getElementById('subsList');
     if (list && !document.getElementById('teacherPanel').classList.contains('hidden')) {
-        if (list.getAttribute('data-count') != data.subs.length) {
-            list.setAttribute('data-count', data.subs.length);
-            document.getElementById('subsCount').innerText = `${data.subs.length} مشاركة`;
-            
-            list.innerHTML = data.subs.length === 0 ? '<div class="text-center py-20 text-slate-300 font-bold">لا يوجد تحليلات واردة حتى الآن...</div>' : 
-            data.subs.map((s, i) => {
-                const ai = deepAnalyze(s.answer);
-                return `
-                <div class="p-6 rounded-3xl transition-all border-r-[10px] border-indigo-600 bg-white shadow-sm flex flex-col md:flex-row justify-between items-center gap-4 ${ai.isAI ? 'ai-detected' : ''}">
-                    <div class="text-right flex-1">
-                        <div class="flex items-center gap-3 mb-2">
-                            <span class="font-bold text-indigo-950 text-lg">${s.name}</span>
-                            <span class="px-3 py-1 rounded-full text-[10px] font-bold ${ai.bg} ${ai.color} border border-current">الحالة: ${ai.label}</span>
-                        </div>
-                        <p class="text-slate-600 leading-relaxed text-sm">${s.answer}</p>
+        document.getElementById('subsCount').innerText = `${data.subs.length} مشاركة`;
+        list.innerHTML = data.subs.length === 0 ? '<div class="text-center py-20 text-slate-300 font-bold italic">لا توجد تحليلات واردة...</div>' : 
+        data.subs.map((s, i) => {
+            const ai = deepAnalyze(s.answer);
+            return `
+            <div class="p-6 rounded-3xl border-r-[10px] border-indigo-600 bg-white shadow-sm flex flex-col md:flex-row justify-between items-center gap-4 ${ai.isAI ? 'ai-detected' : ''}">
+                <div class="text-right flex-1">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="font-bold text-indigo-950 text-lg">${s.name}</span>
+                        <span class="px-3 py-1 rounded-full text-[10px] font-bold ${ai.bg} ${ai.color} border border-current">${ai.label}</span>
                     </div>
-                    <div class="flex flex-col items-center bg-indigo-50 p-4 rounded-2xl min-w-[100px]">
-                        <span class="text-[10px] font-bold text-indigo-400 mb-1">التقييم الرقمي</span>
-                        <input type="number" value="${s.grade}" onchange="updateGrade(${i}, this.value)" class="w-16 p-2 bg-white border-2 border-indigo-200 rounded-xl text-center font-bold text-indigo-700 outline-none focus:border-indigo-500">
-                    </div>
-                </div>`;
-            }).join('');
-            renderChart(data.subs);
-        }
+                    <p class="text-slate-600 text-sm italic">"${s.answer}"</p>
+                </div>
+                <div class="flex flex-col items-center bg-indigo-50 p-4 rounded-2xl min-w-[90px]">
+                    <span class="text-[10px] font-bold text-indigo-400 mb-1 italic text-center">الدرجة</span>
+                    <input type="number" value="${s.grade}" onchange="updateGrade(${i}, this.value)" class="w-14 p-1 bg-white border-2 border-indigo-200 rounded-xl text-center font-bold text-indigo-700 outline-none">
+                </div>
+            </div>`;
+        }).join('');
+        renderChart(data.subs);
     }
 }
 
 function updateQuestion() {
     const q = document.getElementById('teacherQ').value;
-    if(!q) return alert("الرجاء كتابة السؤال أولاً!");
-    let data = JSON.parse(localStorage.getItem(currentRoomKey) || '{"question":"","subs":[]}');
-    data.question = q;
+    const model = document.getElementById('modelAns').value;
+    if(!q) return alert("اكتبي السؤال!");
+    let data = JSON.parse(localStorage.getItem(currentRoomKey) || '{"question":"","model":"","subs":[]}');
+    data.question = q; data.model = model;
     localStorage.setItem(currentRoomKey, JSON.stringify(data));
-    alert("تم إرسال التحدي لغرفة الطلاب!");
+    alert("تم نشر التحدي!");
 }
 
 function submitAnswer() {
     const name = document.getElementById('sName').value;
     const ans = document.getElementById('sAnswer').value;
-    if(!name || !ans) return alert("الرجاء إكمال الاسم والإجابة!");
-    let data = JSON.parse(localStorage.getItem(currentRoomKey) || '{"question":"","subs":[]}');
-    data.subs.push({ name, answer: ans, grade: 0 });
+    if(!name || !ans) return alert("أكملي البيانات!");
+    let data = JSON.parse(localStorage.getItem(currentRoomKey) || '{"question":"","model":"","subs":[]}');
+    const grade = autoGrade(ans, data.model);
+    data.subs.push({ name, answer: ans, grade: grade });
     localStorage.setItem(currentRoomKey, JSON.stringify(data));
     document.getElementById('sAnswer').value = "";
-    alert("تم إرسال إجابتك بنجاح ✅");
+    alert("تم إرسال التحليل بنجاح ✅");
 }
 
 function updateGrade(idx, val) {
@@ -551,11 +557,7 @@ function updateGrade(idx, val) {
 }
 
 function clearCurrentRoom() {
-    if(confirm("سيتم حذف بيانات الغرفة المفتوحة حالياً فقط.. هل أنتِ متأكدة؟")) {
-        localStorage.removeItem(currentRoomKey);
-        alert("تم تصفير المختبر بنجاح.");
-        location.reload();
-    }
+    if(confirm("تصفير بيانات المختبر؟")) { localStorage.removeItem(currentRoomKey); location.reload(); }
 }
 
 function renderChart(subs) {
@@ -566,7 +568,7 @@ function renderChart(subs) {
         type: 'bar',
         data: {
             labels: subs.map(s => s.name),
-            datasets: [{ label: 'الدرجة', data: subs.map(s => s.grade), backgroundColor: '#4f46e5', borderRadius: 10 }]
+            datasets: [{ label: 'الدرجة', data: subs.map(s => s.grade), backgroundColor: '#4f46e5', borderRadius: 8 }]
         },
         options: { maintainAspectRatio: false, scales: { y: { beginAtZero: true, max: 10 } }, plugins: { legend: { display: false } } }
     });
