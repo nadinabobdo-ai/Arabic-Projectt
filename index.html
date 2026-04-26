@@ -1,1074 +1,602 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عقولٌ تصنع | منصة الإبداع والوعي الرقمي</title>
-    <!-- تضمين مكتبة التنسيق -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- تضمين مكتبة الرسوم البيانية -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- تضمين الخط العربي -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Tajawal', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-        }
-        .problem-section {
-            background: linear-gradient(to bottom, #f8fafc, #ffffff);
-        }
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-        }
-        .stat-card {
-            border-right: 4px solid #4f46e5;
-            transition: all 0.3s ease;
-        }
-        .stat-card:hover {
-            background-color: rgba(255, 255, 255, 0.15);
-            transform: translateX(-5px);
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>عقولٌ تصنع | منصة الإبداع والوعي الرقمي</title>
+	<!-- تضمين مكتبة التنسيق -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<!-- تضمين مكتبة الرسوم البيانية -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<!-- تضمين الخط العربي -->
+	<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<style>
+	body {
+		font-family: 'Tajawal', sans-serif;
+		scroll-behavior: smooth;
+	}
+	
+	.hero-gradient {
+		background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+	}
+	
+	.problem-section {
+		background: linear-gradient(to bottom, #f8fafc, #ffffff);
+	}
+	
+	.card-hover {
+		transition: all 0.3s ease;
+	}
+	
+	.card-hover:hover {
+		transform: translateY(-10px);
+		box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+	}
+	
+	.stat-card {
+		border-right: 4px solid #4f46e5;
+		transition: all 0.3s ease;
+	}
+	
+	.stat-card:hover {
+		background-color: rgba(255, 255, 255, 0.15);
+		transform: translateX(-5px);
+	}
+	</style>
 </head>
-<body class="bg-slate-50 text-slate-900">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">ع</div>
-                    <span class="text-xl font-bold text-indigo-900">عقولٌ تصنع</span>
-                </div>
-                <div class="hidden md:flex gap-8">
-                    <a href="#home" class="hover:text-indigo-600 font-medium transition">الرئيسية</a>
-                    <a href="#problem" class="hover:text-indigo-600 font-medium transition">جوهر المشكلة</a>
-                    <a href="#stats" class="hover:text-indigo-600 font-medium transition">إحصائيات</a>
-                    <a href="#library" class="hover:text-indigo-600 font-medium transition">المكتبة</a>
-                    <a href="https://emiratesschoolsese-my.sharepoint.com/:v:/g/personal/stuf20180007741_moe_sch_ae/IQDYspsZIhFdS43oUfk25hoVAQ262VVSJWinYqrlsoZUrSA?nav=eyJyZWZlcnJlclNvdXJjZSI6T3RoZXIiLCJyZWZlcnJlclVuaXQiOiJleHBsb3JlciIsIndpdGhtZW51Ijp0cnVlLCJmZmVhdHVyZSI6IklNeVpXciIsImNlbnRlcmlkIjoiaNEUZpbgVzTGlua0NvcHkifX0&e=diskCe" target="_blank" class="hover:text-indigo-600 font-medium transition">المناظرة</a>
-                    <a href="#team" class="hover:text-indigo-600 font-medium transition">فريقنا</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="pt-32 pb-20 hero-gradient text-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 italic leading-tight">عقلك هو القائد <br class="md:hidden"> والتقنية هي الوسيلة</h1>
-            <p class="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">مبادرة توعوية تهدف لتعزيز الإنسانية والوعي في عصر الخوارزميات، تحت إشراف طالبات الصف الثامن بمدرسة الفجيرة.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#problem" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full font-bold transition shadow-lg w-full sm:w-auto">السيناريو</a>
-                <a href="#library" class="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-full font-bold transition border border-white/30 w-full sm:w-auto">تصفح المكتبة</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-<section id="problem" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-4">
-            
-            <div class="grid lg:grid-cols-2 gap-12 items-start">
-                
-                <div class="bg-slate-50 p-8 md:p-10 rounded-[3rem] border border-slate-200 shadow-sm">
-                    <div class="flex items-center gap-3 mb-6 text-indigo-600">
-                        <span class="text-3xl">🎬</span>
-                        <h2 class="text-2xl font-bold italic">سيناريو من واقعنا</h2>
-                    </div>
-                    
-                    <div class="space-y-4 text-slate-700 leading-relaxed text-lg">
-                        <p>
-                            في مكاتبنا وفصولنا الدراسية، أصبحت التكنولوجيا المحرك الأساسي؛ الحواسيب تعد التقارير، والذكاء الاصطناعي يصمم المشاريع. لكن خلف هذا الجمال التنظيمي، بدأت تظهر فجوة عميقة.
-                        </p>
-                        
-                        <div class="bg-white p-6 rounded-2xl border-r-4 border-amber-400 shadow-sm italic">
-                            "في أحد المواقف، قدم فريق مشروعاً عن <span class="font-bold text-slate-900">'وظائف المستقبل'</span> مستخدماً الذكاء الاصطناعي بالكامل. العرض كان مبهراً، لكن عند النقاش، ساد الصمت.. لم يتمكنوا من شرح التفاصيل لأنهم لم يشاركوا في التفكير أو التحليل المتعمق."
-                        </div>
-
-                        <p class="font-bold text-indigo-900 mt-6">
-                            هنا يطرح السؤال نفسه: هل التكنولوجيا وسيلة لتطويرنا، أم أنها بدأت تقوم بالعمل بدلاً منا؟
-                        </p>
-                    </div>
-                </div>
-
-                <div>
-                    <h2 class="text-3xl font-bold text-indigo-950 mb-8 pr-4">لماذا نبحث عن الحل؟</h2>
-                    
-                    <div class="grid gap-4">
-                        <div class="p-5 bg-white border border-slate-100 rounded-2xl flex items-start gap-4 hover:shadow-md transition">
-                            <div class="w-12 h-12 bg-indigo-100 rounded-full flex-shrink-0 flex items-center justify-center text-xl text-indigo-600">⚖️</div>
-                            <div>
-                                <h4 class="font-bold text-indigo-900">التوازن الرقمي</h4>
-                                <p class="text-sm text-slate-600">موازنة استخدام التكنولوجيا مع مهارات العقل البشري.</p>
-                            </div>
-                        </div>
-
-                        <div class="p-5 bg-white border border-slate-100 rounded-2xl flex items-start gap-4 hover:shadow-md transition">
-                            <div class="w-12 h-12 bg-emerald-100 rounded-full flex-shrink-0 flex items-center justify-center text-xl text-emerald-600">🛡️</div>
-                            <div>
-                                <h4 class="font-bold text-emerald-900">حماية الإبداع</h4>
-                                <p class="text-sm text-slate-600">مواجهة ضعف التفكير الناتج عن الاعتماد الكلي على الآلة.</p>
-                            </div>
-                        </div>
-
-                        <div class="p-5 bg-white border border-slate-100 rounded-2xl flex items-start gap-4 hover:shadow-md transition">
-                            <div class="w-12 h-12 bg-amber-100 rounded-full flex-shrink-0 flex items-center justify-center text-xl text-amber-600">🚀</div>
-                            <div>
-                                <h4 class="font-bold text-amber-900">بناء المستقبل</h4>
-                                <p class="text-sm text-slate-600">إعداد جيل يجمع بين التقنية والابتكار الشخصي.</p>
-                            </div>
-                        </div>
-
-                        <div class="p-5 bg-white border border-slate-100 rounded-2xl flex items-start gap-4 hover:shadow-md transition">
-                            <div class="w-12 h-12 bg-rose-100 rounded-full flex-shrink-0 flex items-center justify-center text-xl text-rose-600">🎯</div>
-                            <div>
-                                <h4 class="font-bold text-rose-900">الاستخدام المسؤول</h4>
-                                <p class="text-sm text-slate-600">ترسيخ التكنولوجيا كوسيلة "دعم" لا "بديل".</p>
-                            </div>
-                        </div>
-
-                        <div class="p-5 bg-indigo-900 text-white rounded-2xl flex items-start gap-4 shadow-lg">
-                            <div class="w-12 h-12 bg-white/10 rounded-full flex-shrink-0 flex items-center justify-center text-xl">🌐</div>
-                            <div>
-                                <h4 class="font-bold">مواكبة العصر</h4>
-                                <p class="text-sm text-indigo-100">معالجة أثر الذكاء الاصطناعي المباشر على حياتنا.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-	
-<section id="outcomes-modern" class="py-24 bg-slate-50 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-64 h-64 bg-indigo-100 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-50"></div>
+<div style="position: fixed; top: 15px; left: 0; right: 0; z-index: 1000000; display: flex; justify-content: center; padding: 0 10px; pointer-events: none;">
+    <div style="background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); padding: 8px 18px; border-radius: 50px; box-shadow: 0 12px 45px rgba(0,0,0,0.15); display: flex; gap: 5px; pointer-events: auto; border: 1px solid #e2e8f0; direction: rtl; flex-wrap: wrap; justify-content: center;">
         
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="text-center mb-16">
-                <span class="px-4 py-1 bg-indigo-600 text-white rounded-full text-xs font-bold tracking-widest uppercase">The Pipeline</span>
-                <h2 class="text-4xl font-black text-indigo-950 mt-4 mb-2 italic">مختبر النتائج والوثائق</h2>
-                <p class="text-slate-500 font-medium">تحويل التخطيط إلى مخرجات ملموسة مدعومة بالمصادر</p>
-            </div>
-<section class="py-16 bg-slate-50">
-    <div class="max-w-5xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-slate-800 mb-4">من الفكرة إلى الأثر: رحلة الابتكار</h2>
-            <p class="text-slate-600 max-w-2xl mx-auto">اتبعنا منهجية التفكير التصميمي لضمان تقديم حلول حقيقية ومستدامة للتحديات الرقمية.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
-            <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-blue-500 card-hover">
-                <div class="flex items-center mb-4">
-                    <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold ml-3">1</span>
-                    <h3 class="text-lg font-bold text-slate-800">فهم الوضع</h3>
-                </div>
-                <p class="text-sm text-slate-600">دراسة السيناريو الرابع وتحليل واقع استخدام التكنولوجيا في المدارس والشركات.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-indigo-500 card-hover">
-                <div class="flex items-center mb-4">
-                    <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold ml-3">2</span>
-                    <h3 class="text-lg font-bold text-slate-800">تحديد المشكلة</h3>
-                </div>
-                <p class="text-sm text-slate-600">رصد التحدي: الاعتماد المفرط على التقنية الذي أضعف مهارات التفكير الإبداعي لدى الأفراد وكتابة بيان واضح للمشكلة.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-purple-500 card-hover">
-                <div class="flex items-center mb-4">
-                    <span class="w-8 h-8 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center font-bold ml-3">3</span>
-                    <h3 class="text-lg font-bold text-slate-800">تقديم الحلول</h3>
-                </div>
-                <p class="text-sm text-slate-600">عصف ذهني للفريق واختيار فكرة منصة "عقول تصنع" كأداة لتعزيز الوعي الرقمي.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-amber-500 card-hover">
-                <div class="flex items-center mb-4">
-                    <span class="w-8 h-8 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center font-bold ml-3">4</span>
-                    <h3 class="text-lg font-bold text-slate-800">النمذجة (Prototyping)</h3>
-                </div>
-                <p class="text-sm text-slate-600">برمجة واجهة الموقع التفاعلية وتصميم "تحدي العقول" والرسوم البيانية الإحصائية.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-emerald-500 card-hover">
-                <div class="flex items-center mb-4">
-                    <span class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center font-bold ml-3">5</span>
-                    <h3 class="text-lg font-bold text-slate-800">اختبار الحل وتحسينه</h3>
-                </div>
-                <p class="text-sm text-slate-600">عرض الموقع على الزملاء، جمع الملاحظات، وتطوير المحتوى ليكون أكثر تأثيراً.</p>
-            </div>
-
-            <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-rose-500 card-hover">
-                <div class="flex items-center mb-4">
-                    <span class="w-8 h-8 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center font-bold ml-3">6</span>
-                    <h3 class="text-lg font-bold text-slate-800">الحل النهائي</h3>
-                </div>
-                <p class="text-sm text-slate-600">إطلاق منصة "عقول تصنع" المتكاملة وربطها بأهداف الاستدامة وجودة الحياة الرقمية.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-    <!-- Statistics Section -->
-<section id="stats" class="py-20 bg-slate-900 text-white overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-black mb-4 tracking-tight italic">نتائج استبيان الوعي الرقمي</h2>
-            <div class="h-1.5 w-32 bg-indigo-500 mx-auto rounded-full mb-6"></div>
-            <p class="text-slate-400 max-w-2xl mx-auto text-lg font-light">تحليل تفصيلي لاستجابات طلاب الصف الثامن (13-14 عاماً) حول عاداتهم الرقمية.</p>
-        </div>
-
-        <div class="grid lg:grid-cols-12 gap-12 items-start">
-            
-            <div class="lg:col-span-8 bg-white p-10 rounded-[3rem] shadow-2xl relative border border-slate-200">
-                <div class="mb-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                    <h4 class="font-black text-slate-900 text-xl italic underline decoration-indigo-500 decoration-4 underline-offset-8">مؤشرات السلوك الرقمي</h4>
-                    <div class="flex gap-6 text-xs font-bold bg-slate-50 p-3 rounded-2xl">
-                        <span class="flex items-center gap-2 text-indigo-600"><div class="w-4 h-4 bg-indigo-600 rounded-md"></div> التركيز الذاتي</span>
-                        <span class="flex items-center gap-2 text-amber-500"><div class="w-4 h-4 bg-amber-500 rounded-md"></div> التشتت الرقمي</span>
-                    </div>
-                </div>
-
-                <div class="relative h-[400px] w-full flex items-end justify-around gap-4 pb-10 pr-10 border-r-2 border-b-2 border-slate-100">
-                    
-                    <div class="absolute -right-12 inset-y-0 flex flex-col justify-between text-[10px] font-bold text-slate-400 pb-10">
-                        <span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span>
-                    </div>
-
-                    <div class="flex flex-col items-center gap-4 w-full group relative">
-                        <div class="flex items-end gap-2 h-[250px]">
-                            <div class="bg-indigo-100 w-5 md:w-8 rounded-t-xl transition-all duration-1000" style="height: 15%;"></div>
-                            <div class="bg-indigo-600 w-5 md:w-8 rounded-t-xl transition-all duration-700 group-hover:scale-y-105 origin-bottom relative shadow-lg shadow-indigo-200" style="height: 85%;">
-                                <span class="absolute -top-8 left-1/2 -translate-x-1/2 text-indigo-600 font-black text-xs">85%</span>
-                            </div>
-                        </div>
-                        <span class="text-[11px] font-black text-slate-500 text-center leading-tight">التحقق<br>اللاإرادي</span>
-                    </div>
-
-                    <div class="flex flex-col items-center gap-4 w-full group relative">
-                        <div class="flex items-end gap-2 h-[250px]">
-                            <div class="bg-amber-100 w-5 md:w-8 rounded-t-xl transition-all duration-1000" style="height: 30%;"></div>
-                            <div class="bg-amber-500 w-5 md:w-8 rounded-t-xl transition-all duration-700 group-hover:scale-y-105 origin-bottom relative shadow-lg shadow-amber-200" style="height: 70%;">
-                                <span class="absolute -top-8 left-1/2 -translate-x-1/2 text-amber-600 font-black text-xs">70%</span>
-                            </div>
-                        </div>
-                        <span class="text-[11px] font-black text-slate-500 text-center leading-tight">استنزاف<br>الوقت</span>
-                    </div>
-
-                    <div class="flex flex-col items-center gap-4 w-full group relative">
-                        <div class="flex items-end gap-2 h-[250px]">
-                            <div class="bg-rose-100 w-5 md:w-8 rounded-t-xl transition-all duration-1000" style="height: 8%;"></div>
-                            <div class="bg-rose-500 w-5 md:w-8 rounded-t-xl transition-all duration-700 group-hover:scale-y-105 origin-bottom relative shadow-lg shadow-rose-200" style="height: 92%;">
-                                <span class="absolute -top-8 left-1/2 -translate-x-1/2 text-rose-600 font-black text-xs">92%</span>
-                            </div>
-                        </div>
-                        <span class="text-[11px] font-black text-indigo-900 text-center leading-tight font-black">الهروب<br>الرقمي</span>
-                    </div>
-
-                    <div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-40 pr-10 pb-10">
-                        <div class="border-t border-dashed border-slate-200 w-full"></div>
-                        <div class="border-t border-dashed border-slate-200 w-full"></div>
-                        <div class="border-t border-dashed border-slate-200 w-full"></div>
-                        <div class="border-t border-dashed border-slate-200 w-full"></div>
-                    </div>
-                </div>
-                <div class="mt-6 flex items-center gap-2 text-slate-400 text-[10px] italic">
-                    <span>*</span>
-                    <p>البيانات مستندة إلى إجابات الطلاب على مقياس من 0 إلى 10[cite: 5, 9].</p>
-                </div>
-            </div>
-
-            <div class="lg:col-span-4 space-y-4">
-                <div class="bg-indigo-600 p-8 rounded-[2.5rem] text-white shadow-xl shadow-indigo-900/20">
-                    <h5 class="font-bold text-lg mb-2">أبرز الملاحظات:</h5>
-                    <ul class="text-sm space-y-4 opacity-90">
-                        <li class="flex items-start gap-2"><span>•</span> <span>أكثر من <b>90%</b> يستخدمون التقنية كمهرب من تحديات المذاكرة[cite: 25, 29].</span></li>
-                        <li class="flex items-start gap-2"><span>•</span> <span><b>8 من أصل 10</b> طلاب يتحققون من هواتفهم دون وجود تنبيهات فعليّة[cite: 3, 7].</span></li>
-                        <li class="flex items-start gap-2"><span>•</span> <span>صعوبة بالغة في العودة للتركيز العميق بعد الرد على الرسائل[cite: 12, 16].</span></li>
-                    </ul>
-                </div>
-                <div class="p-6 border-2 border-slate-800 rounded-[2.5rem]">
-                    <p class="text-slate-400 text-xs italic leading-relaxed">بناءً على "اختبر وعيك الرقمي" - نموذج ميكروسوفت فورمز المرفق[cite: 22, 32].</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-    <!-- Library Section -->
-    <section id="library" class="py-20">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <div class="inline-block px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-bold mb-4">حلول وعروض</div>
-                <h2 class="text-3xl font-bold text-indigo-900 mb-4 italic">المكتبة الرقمية المرئية</h2>
-                <p class="text-slate-600">تصفحوا إنتاجاتنا المعرفية والمرئية</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Book 1 -->
-                <div class="bg-white rounded-2xl shadow p-6 card-hover border border-slate-100 flex flex-col h-full">
-                    <div class="w-full h-40 bg-slate-100 rounded-xl mb-4 flex items-center justify-center text-5xl">🤖</div>
-                    <h3 class="text-lg font-bold mb-2 text-indigo-800">كيف لا تصبح روبوتاً</h3>
-                    <p class="text-slate-600 text-xs mb-4 flex-grow leading-relaxed">دليل شامل لاستعادة السيطرة على وعيك الرقمي واستراتيجيات عملية.</p>
-                    <a href="https://emiratesschoolsese-my.sharepoint.com/:b:/g/personal/stuf20180007741_moe_sch_ae/IQAEa9Qlzij5QLptQPoSW3Y9AQplFelC2bwK7BP5NCv-VlY?e=h6BGDM" target="_blank" class="w-full py-2 bg-indigo-50 text-indigo-700 rounded-lg text-center font-bold text-sm hover:bg-indigo-600 hover:text-white transition">👁️ عرض الكتيب</a>
-                </div>
-
-                <!-- Book 2 -->
-                <div class="bg-white rounded-2xl shadow p-6 card-hover border border-slate-100 flex flex-col h-full">
-                    <div class="w-full h-40 bg-indigo-50 rounded-xl mb-4 flex items-center justify-center text-5xl">🧠</div>
-                    <h3 class="text-lg font-bold mb-2 text-indigo-800">عقولٌ تصنع.. تقنياتٌ تتبع</h3>
-                    <p class="text-slate-600 text-xs mb-4 flex-grow leading-relaxed">مطوية تلخص جلستنا الحوارية حول إشكالية سرقة التكنولوجيا لبصمتنا الإبداعية.</p>
-                    <a href="https://emiratesschoolsese-my.sharepoint.com/:b:/g/personal/stuf20180007741_moe_sch_ae/IQCfBvGjqnujRYT7Jgb8UvRCAbw8YlVysQhnA6b0hIZZitg?e=aBmyVr" target="_blank" class="w-full py-2 bg-indigo-50 text-indigo-700 rounded-lg text-center font-bold text-sm hover:bg-indigo-600 hover:text-white transition">👁️ عرض الملف</a>
-                </div>
-
-                <!-- Book 3 -->
-                <div class="bg-white rounded-2xl shadow p-6 card-hover border border-slate-100 flex flex-col h-full">
-                    <div class="w-full h-40 bg-amber-50 rounded-xl mb-4 flex items-center justify-center text-5xl">🎨</div>
-                    <h3 class="text-lg font-bold mb-2 text-indigo-800">مدينة الأزرار الباهتة</h3>
-                    <p class="text-slate-600 text-xs mb-4 flex-grow leading-relaxed">قصة ملهمة عن استعادة ألوان المدينة من خلال التفكير المستقل.</p>
-                    <a href="https://www.canva.com/design/DAHBZk6rS-o/Kt_PJmuiml2R4Y4cFvipJw/edit?utm_content=DAHBZk6rS-o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="w-full py-2 bg-indigo-50 text-indigo-700 rounded-lg text-center font-bold text-sm hover:bg-indigo-600 hover:text-white transition">👁️ قراءة القصة</a>
-                </div>
-
-                <!-- Book 4 - تعديل اللون ليصبح متناسقاً (Indigo) -->
-                <div class="bg-white rounded-2xl shadow p-6 card-hover border border-slate-100 flex flex-col h-full">
-                    <div class="w-full h-40 bg-indigo-100 rounded-xl mb-4 flex items-center justify-center text-5xl">🎤</div>
-                    <h3 class="text-lg font-bold mb-2 text-indigo-800">مشاهدة المناظرة</h3>
-                    <p class="text-slate-600 text-xs mb-4 flex-grow leading-relaxed">فيديو يوثق مناظرة فكرية حية حول تأثير التقنية على وعي الأجيال القادمة.</p>
-                    <a href="https://emiratesschoolsese-my.sharepoint.com/:v:/g/personal/stuf20180007741_moe_sch_ae/IQDYspsZIhFdS43oUfk25hoVAQ262VVSJWinYqrlsoZUrSA?nav=eyJyZWZlcnJlclNvdXJjZSI6T3RoZXIiLCJyZWZlcnJlclVuaXQiOiJleHBsb3JlciIsIndpdGhtZW51Ijp0cnVlLCJmZmVhdHVyZSI6IklNeVpXciIsImNlbnRlcmlkIjoiaNEUZpbgVzTGlua0NvcHkifX0&e=diskCe" target="_blank" class="w-full py-2 bg-indigo-600 text-white rounded-lg text-center font-bold text-sm hover:bg-indigo-700 transition shadow-md">🎬 الانتقال للفيديو</a>
-                </div>
-            </div>
-        </div>
-    </section>
-	
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عقولٌ تصنع - رادار الكشف الزمني</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Tajawal', sans-serif; background: #f1f5f9; }
-        .hidden { display: none !important; }
-        .ai-alert { border: 2px solid #ef4444 !important; background-color: #fef2f2 !important; }
-        .human-badge { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
-        .ai-badge { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
-        .edit-input { width: 60px; text-align: center; border-radius: 10px; padding: 2px; border: 1px solid #cbd5e1; font-weight: bold; }
-    </style>
-</head>
-<body class="min-h-screen">
-
-    <div id="selectionScreen" class="flex items-center justify-center min-h-screen bg-slate-900 px-4">
-        <div class="bg-white p-10 rounded-[3rem] shadow-2xl w-full max-w-md text-center border-b-[12px] border-indigo-500">
-            <h1 class="text-3xl font-bold text-slate-800 mb-8 italic">عقولٌ تصنع 🔬</h1>
-            <div class="space-y-4">
-                <select id="roomNumber" class="w-full p-4 border-2 rounded-2xl font-bold text-indigo-600 outline-none">
-                    <script>for(let i=1; i<=15; i++) document.write(`<option value="${i}">مختبر رقم ${i}</option>`);</script>
-                </select>
-                <button onclick="authTeacher()" class="w-full py-4 bg-indigo-600 text-white rounded-2xl font-bold hover:bg-indigo-700 transition-all">دخول المعلمة 👩‍🔬</button>
-                <button onclick="enterStudent()" class="w-full py-4 bg-emerald-500 text-white rounded-2xl font-bold hover:bg-emerald-600 transition-all">دخول الطالبة 🎓</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="teacherPanel" class="hidden p-4 lg:p-8 max-w-7xl mx-auto space-y-6">
-        <header class="flex flex-col md:flex-row justify-between items-center bg-white p-6 rounded-3xl shadow-sm gap-4 border-b-4 border-indigo-500">
-            <div>
-                <h2 class="text-2xl font-bold text-slate-800 italic">مختبر التحليل الزمني: <span id="tRoomId"></span></h2>
-                <p class="text-[10px] text-slate-400 font-bold">نظام التوقع الذكي بناءً على سرعة الكتابة</p>
-            </div>
-            <div class="flex gap-2">
-                <button onclick="exportPDF()" class="bg-indigo-600 text-white px-5 py-2 rounded-xl font-bold text-sm shadow-md">تقرير النتائج PDF 📄</button>
-                <button onclick="clearData()" class="bg-red-50 text-red-500 px-4 py-2 rounded-xl text-sm font-bold">تصفير 🗑️</button>
-                <button onclick="location.reload()" class="bg-slate-100 px-4 py-2 rounded-xl text-sm">خروج</button>
-            </div>
-        </header>
-
-        <main class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <aside class="lg:col-span-4 space-y-6">
-                <div class="bg-white p-6 rounded-[2.5rem] shadow-sm border-t-8 border-indigo-600">
-                    <h3 class="font-bold mb-4 text-slate-800 italic">طرح التحدي</h3>
-                    <textarea id="teacherQ" class="w-full p-4 bg-slate-50 border rounded-2xl h-24 mb-3 outline-none" placeholder="السؤال..."></textarea>
-                    <textarea id="modelAns" class="w-full p-4 bg-emerald-50 border border-emerald-100 rounded-2xl h-24 outline-none" placeholder="الكلمات المفتاحية..."></textarea>
-                    <button onclick="saveQuest()" class="w-full bg-indigo-600 text-white py-4 rounded-2xl font-bold shadow-lg">نشر للفصل 📡</button>
-                </div>
-                
-                <div class="bg-white p-6 rounded-[2.5rem] shadow-sm h-72 border border-slate-100">
-                    <h3 class="font-bold mb-4 text-slate-700 text-xs italic">تكرار المصطلحات العلمية</h3>
-                    <div class="h-48"><canvas id="gapChart"></canvas></div>
-                </div>
-            </aside>
-
-            <section id="printArea" class="lg:col-span-8 space-y-6">
-                <div class="bg-white rounded-[2.5rem] shadow-sm overflow-x-auto border border-slate-200">
-                    <table class="w-full text-right">
-                        <thead class="bg-slate-50 border-b">
-                            <tr>
-                                <th class="p-4 text-slate-600 text-xs font-bold">الطالبة</th>
-                                <th class="p-4 text-slate-600 text-xs font-bold">الدرجة النهائية</th>
-                                <th class="p-4 text-slate-600 text-xs font-bold">توقع المصدر</th>
-                                <th class="p-4 text-slate-600 text-xs font-bold">زمن الحل</th>
-                                <th class="p-4 text-slate-600 text-xs font-bold">تعديل</th>
-                            </tr>
-                        </thead>
-                        <tbody id="gradesTableBody"></tbody>
-                    </table>
-                </div>
-
-                <div id="subsList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-            </section>
-        </main>
-    </div>
-
-    <div id="studentPanel" class="hidden p-6 max-w-xl mx-auto min-h-screen flex items-center">
-        <div class="bg-white p-10 rounded-[3.5rem] shadow-2xl w-full border-t-[12px] border-emerald-500">
-            <h2 id="activeQ" class="text-xl font-bold text-slate-800 mb-8 bg-slate-50 p-6 rounded-3xl italic text-center">بانتظار السؤال...</h2>
-            <div id="studentForm" class="space-y-4">
-                <input id="sName" type="text" placeholder="اسمك الكامل" class="w-full p-5 border-2 rounded-2xl text-right font-bold outline-none focus:border-emerald-500">
-                <textarea id="sAnswer" class="w-full p-5 border-2 rounded-2xl h-52 text-right outline-none focus:border-emerald-500" placeholder="اكتبي إجابتك هنا بأسلوبك العلمي..."></textarea>
-                <button onclick="submitAnswer()" class="w-full bg-emerald-500 text-white py-5 rounded-2xl font-bold text-xl shadow-xl active:scale-95 transition-all">إرسال التحليل 📩</button>
-            </div>
-            <div id="feedbackBox" class="hidden mt-6 p-8 rounded-[2rem] text-center shadow-inner">
-                <p id="feedbackText" class="font-bold text-xl"></p>
-                <button onclick="location.reload()" class="mt-4 text-xs underline text-slate-400">خروج</button>
-            </div>
-        </div>
-    </div>
-
-<script>
-let currentRoomKey = "";
-let startTime = 0;
-let gapChart = null;
-let lastCount = -1;
-
-// 1. نظام التوقع القائم على الزمن والكلمات
-function predictSource(ans, timeSec) {
-    const wordCount = ans.trim().split(/\s+/).length;
-    // البشر يحتاجون تقريباً 1.5 ثانية لكل كلمة (تفكير + كتابة)
-    const expectedTime = wordCount * 1.5;
-    
-    // إذا كان الوقت الفعلي أقل من 60% من المتوقع -> بوت
-    const isAI = (timeSec < (expectedTime * 0.6) && wordCount > 5);
-    
-    return { isAI, wordCount };
-}
-
-function ruleEngineGrading(ans, keywords) {
-    let score = 0;
-    const kList = keywords.split(/[\s،,]+/).filter(w => w.length > 1);
-    let matches = 0;
-    kList.forEach(w => { if(ans.toLowerCase().includes(w.trim().toLowerCase())) matches++; });
-    
-    score += (matches / Math.max(kList.length, 1)) * 4; // كلمات مفتاحية (40%)
-    if (/لأن|لذلك|بناء|حيث/.test(ans)) score += 2; // تنظيم
-    if (/مثال|دليل|مثل/.test(ans)) score += 2; // مثال
-    if (ans.length > 40) score += 2; // لغة
-    
-    return Math.min(Math.round(score * 10) / 10, 10);
-}
-
-function authTeacher() {
-    const num = document.getElementById('roomNumber').value;
-    if(prompt(`الرمز الخاص بمختبر ${num}:`) == (parseInt(num)+100)) {
-        currentRoomKey = "PREDICT_V12_" + num;
-        document.getElementById('tRoomId').innerText = num;
-        document.getElementById('selectionScreen').classList.add('hidden');
-        document.getElementById('teacherPanel').classList.remove('hidden');
-        setInterval(sync, 1000);
-    }
-}
-
-function enterStudent() {
-    currentRoomKey = "PREDICT_V12_" + document.getElementById('roomNumber').value;
-    startTime = Date.now();
-    document.getElementById('selectionScreen').classList.add('hidden');
-    document.getElementById('studentPanel').classList.remove('hidden');
-    setInterval(sync, 1000);
-}
-
-function sync() {
-    const data = JSON.parse(localStorage.getItem(currentRoomKey) || '{"q":"...","k":"","s":[]}');
-    if(document.getElementById('activeQ')) document.getElementById('activeQ').innerText = data.q;
-    
-    const tableBody = document.getElementById('gradesTableBody');
-    const subsList = document.getElementById('subsList');
-
-    if(tableBody && !document.getElementById('teacherPanel').classList.contains('hidden')) {
-        tableBody.innerHTML = data.s.map((s, i) => `
-            <tr class="border-b border-slate-50">
-                <td class="p-4 font-bold text-slate-700 text-sm">${s.name}</td>
-                <td class="p-4 font-black text-indigo-600">${s.grade}</td>
-                <td class="p-4">
-                    <span class="px-3 py-1 rounded-full text-[9px] font-bold ${s.isAI ? 'ai-badge' : 'human-badge'}">
-                        ${s.isAI ? '⚠️ ذكاء اصطناعي' : '👤 بشري'}
-                    </span>
-                </td>
-                <td class="p-4 text-[10px] text-slate-400 font-bold italic">${s.time}</td>
-                <td class="p-4">
-                    <input type="number" step="0.5" class="edit-input bg-slate-50" value="${s.grade}" onchange="updateGrade(${i}, this.value)">
-                </td>
-            </tr>
-        `).join('');
-
-        subsList.innerHTML = data.s.map(s => `
-            <div class="bg-white p-5 rounded-[2rem] shadow-sm border ${s.isAI ? 'ai-alert' : 'border-slate-100'}">
-                <div class="flex justify-between items-center mb-2">
-                    <h4 class="font-bold text-slate-800 text-xs">${s.name}</h4>
-                    <span class="text-xs font-bold text-indigo-500">${s.grade}/10</span>
-                </div>
-                <p class="text-[10px] text-slate-500 leading-relaxed italic">"${s.ans}"</p>
-            </div>
-        `).join('');
-
-        if(data.s.length !== lastCount) {
-            updateGapChart(data);
-            lastCount = data.s.length;
-        }
-    }
-}
-
-function updateGrade(index, val) {
-    let data = JSON.parse(localStorage.getItem(currentRoomKey));
-    data.s[index].grade = parseFloat(val);
-    localStorage.setItem(currentRoomKey, JSON.stringify(data));
-}
-
-function submitAnswer() {
-    const n = document.getElementById('sName').value;
-    const a = document.getElementById('sAnswer').value;
-    if(!n || !a) return alert("أكملي البيانات!");
-    
-    const timeSec = Math.round((Date.now() - startTime) / 1000);
-    const timeFmt = Math.floor(timeSec / 60) + "د " + (timeSec % 60) + "ث";
-    
-    const data = JSON.parse(localStorage.getItem(currentRoomKey));
-    const prediction = predictSource(a, timeSec);
-    const grade = ruleEngineGrading(a, data.k);
-
-    data.s.push({ name: n, ans: a, grade: grade, isAI: prediction.isAI, time: timeFmt });
-    localStorage.setItem(currentRoomKey, JSON.stringify(data));
-
-    document.getElementById('studentForm').classList.add('hidden');
-    document.getElementById('feedbackBox').classList.remove('hidden');
-    document.getElementById('feedbackBox').className = `mt-6 p-8 rounded-[2rem] text-center ${grade >= 5 ? 'bg-emerald-50 text-emerald-700' : 'bg-red-50 text-red-700'}`;
-    document.getElementById('feedbackText').innerText = grade >= 7 ? "رائعة! استنتاجك العلمي ممتاز 🌟" : "حاولي دعم إجابتك بمصطلحات دقيقة 📖";
-}
-
-function updateGapChart(data) {
-    const ctx = document.getElementById('gapChart')?.getContext('2d');
-    if(!ctx || data.s.length === 0) return;
-    const kWords = data.k.split(/[\s،,]+/).filter(w => w.length > 1);
-    const counts = kWords.map(w => data.s.filter(s => s.ans.toLowerCase().includes(w.toLowerCase())).length);
-
-    if(gapChart) gapChart.destroy();
-    gapChart = new Chart(ctx, {
-        type: 'bar',
-        data: { labels: kWords, datasets: [{ label: 'تكرار المصطلح', data: counts, backgroundColor: '#6366f1', borderRadius: 10 }] },
-        options: { maintainAspectRatio: false, animation: false, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } } }
-    });
-}
-
-function saveQuest() {
-    const q = document.getElementById('teacherQ').value;
-    const k = document.getElementById('modelAns').value;
-    if(!q) return alert("أدخلي السؤال!");
-    localStorage.setItem(currentRoomKey, JSON.stringify({q, k, s: []}));
-    alert("تم النشر بنجاح!");
-}
-
-function clearData() { if(confirm("تصفير كل النتائج؟")) { localStorage.removeItem(currentRoomKey); location.reload(); } }
-
-function exportPDF() {
-    const { jsPDF } = window.jspdf;
-    html2canvas(document.getElementById('printArea')).then(canvas => {
-        let doc = new jsPDF('p', 'mm', 'a4');
-        doc.addImage(canvas.toDataURL('image/png'), 'PNG', 10, 10, 190, 0);
-        doc.save("تقرير_مختبر_عقول_تصنع.pdf");
-    });
-}
-</script>
-</body>
-</html>
-	
-	<section id="values-gallery" class="py-20 bg-white border-y border-slate-100" dir="rtl">
-    <div class="max-w-7xl mx-auto px-4">
+        <a href="#home" style="text-decoration:none; color:#1e293b; font-weight:bold; font-size:12px; padding: 6px 10px; border-radius: 20px; transition: 0.3s;" onmouseover="this.style.backgroundColor='#f1f5f9'" onmouseout="this.style.backgroundColor='transparent'">🏠 الرئيسية</a>
         
-        <div class="text-center mb-16">
-            <span class="inline-block px-4 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-bold mb-4">قيمنا الأصيلة</span>
-            <h2 class="text-3xl md:text-4xl font-black text-indigo-950 mb-4 italic">العقول تبدع.. والقيم تجمع</h2>
-            <p class="text-slate-600 max-w-2xl mx-auto text-lg">نستمد إلهامنا من قادتنا وتراثنا لبناء جيل يجمع بين ذكاء العقل ودفء القلب.</p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            
-            <div class="group relative overflow-hidden rounded-[2rem] shadow-lg aspect-[3/4] card-hover border-4 border-white hover:border-indigo-100">
-                <img src="MBR2.jpg" alt="صاحب السمو الشيخ محمد بن راشد آل مكتوم" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 to-transparent flex flex-col justify-end p-6 text-white text-right">
-                    <h4 class="font-bold text-lg mb-1">رؤية قائد</h4>
-                    <p class="text-xs text-slate-200">صناعة المستقبل لا تعتمد على التقنية وحدها، بل على العقول التي تديرها.</p>
-                </div>
-            </div>
-
-            <div class="group relative overflow-hidden rounded-[2rem] shadow-lg aspect-[3/4] card-hover border-4 border-white hover:border-amber-100">
-                <img src="sheikh-zayed.png" alt="الشيخ زايد والأسرة" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-amber-950/90 to-transparent flex flex-col justify-end p-6 text-white text-right">
-                    <h4 class="font-bold text-lg mb-1">إرث الخمسين</h4>
-                    <p class="text-xs text-slate-200">الأسرة هي اللبنة الأولى لبناء مجتمع قوي ومتماسك.</p>
-                </div>
-            </div>
-
-            <div class="group relative overflow-hidden rounded-[2rem] shadow-lg aspect-[3/4] card-hover border-4 border-white hover:border-emerald-100">
-                <img src="MBZ W.jpg" alt="صاحب السمو الشيخ محمد بن زايد والجيل الصاعد" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-emerald-950/90 to-transparent flex flex-col justify-end p-6 text-white text-right">
-                    <h4 class="font-bold text-lg mb-1">جيل الغد</h4>
-                    <p class="text-xs text-slate-200">الاستثمار في الإنسان هو أعظم استثمار لمستقبل الإمارات.</p>
-                </div>
-            </div>
-
-            <div class="group relative overflow-hidden rounded-[2rem] shadow-lg aspect-[3/4] card-hover border-4 border-white hover:border-rose-100 flex items-center justify-center p-8 bg-slate-50">
-                <img src="com.png" alt="شعار عام المجتمع 54" class="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105">
-                <div class="absolute inset-x-0 bottom-0 bg-rose-950/90 p-6 text-white text-center rounded-t-3xl">
-                    <h4 class="font-bold text-lg mb-1">روح المجتمع</h4>
-                    <p class="text-xs text-rose-100">نعمل معاً، عقولاً وقلوباً، لتعزيز الوعي الرقمي في مجتمعنا.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="py-16 bg-white border-t-4 border-indigo-50">
-    <div class="max-w-6xl mx-auto px-6">
+        <a href="#problem" style="text-decoration:none; color:#1e293b; font-weight:bold; font-size:12px; padding: 6px 10px; border-radius: 20px; transition: 0.3s;" onmouseover="this.style.backgroundColor='#f1f5f9'" onmouseout="this.style.backgroundColor='transparent'">🎬 السيناريو</a>
         
-        <div class="mb-12 text-center">
-            <h2 class="text-3xl font-bold text-slate-900 mb-6">رؤية القيادة: من الوعي إلى الترابط</h2>
-            <div class="max-w-3xl mx-auto p-6 bg-indigo-50 rounded-2xl border-r-8 border-indigo-600 text-right">
-                <p class="text-lg text-slate-800 leading-relaxed">
-                    بعد رصد التحديات التي فرضتها النهضة التكنولوجية المتسارعة، وما تبعها من زيادة في ملامح التفكك الأسري وانشغال الأفراد بالعوالم الافتراضية، انطلقت القيادة الرشيدة من هذا المنطلق لتسمية هذا العام بـ <span class="font-bold text-indigo-700 underline">"عام الأسرة"</span>. تهدف هذه الرؤية إلى استعادة دفء العلاقات الواقعية وتحصين المجتمع من العزلة الرقمية.
-                </p>
-                <div class="mt-4 font-bold text-indigo-900 italic">
-                    Slogan: "أسرة متماسكة.. مجتمع واعي"
-                </div>
-            </div>
-        </div>
-
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-    
-    <div class="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 text-center transition-all hover:shadow-2xl">
-        <h3 class="text-xl font-black text-indigo-950 mb-2 italic">المفارقة الرقمية في العلاقات الأسرية</h3>
-        <p class="text-[10px] text-slate-400 mb-6 font-bold uppercase tracking-widest">تحليل الفجوة السلوكية بين الآباء والأبناء</p>
+        <a href="#stats" style="text-decoration:none; color:#1e293b; font-weight:bold; font-size:12px; padding: 6px 10px; border-radius: 20px; transition: 0.3s;" onmouseover="this.style.backgroundColor='#f1f5f9'" onmouseout="this.style.backgroundColor='transparent'">📊 الإحصاءات</a>
         
-        <img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['تشتت الآباء','تشتت الأبناء','الأثر الإيجابي'],datasets:[{label:'نسبة التأثير (%)',data:[51,72,81],backgroundColor:['%236366f1','%23f59e0b','%2310b981'],borderRadius:10}]}}" 
-             alt="إحصاءات التواصل الأسري - دراسة بيو" 
-             class="w-full rounded-2xl shadow-inner bg-slate-50 p-4">
+        <a href="#library" style="text-decoration:none; color:#1e293b; font-weight:bold; font-size:12px; padding: 6px 10px; border-radius: 20px; transition: 0.3s;" onmouseover="this.style.backgroundColor='#f1f5f9'" onmouseout="this.style.backgroundColor='transparent'">📚 المكتبة</a>
+
+        <a href="#vision-section" style="text-decoration:none; color:#4f46e5; font-weight:bold; font-size:12px; padding: 6px 10px; border-radius: 20px; transition: 0.3s;" onmouseover="this.style.backgroundColor='#eef2ff'" onmouseout="this.style.backgroundColor='transparent'">👨‍👩‍👧‍👦 عام الأسرة</a>
         
-        <div class="mt-6 py-3 border-t border-slate-100 flex justify-between items-center px-2">
-            <span class="text-[10px] text-indigo-600 font-black">الدراسة الأحدث عالمياً</span>
-            <p class="text-[10px] text-slate-500 font-bold">
-                المصدر: مركز بيو للأبحاث (Pew Research Center)
-            </p>
-        </div>
-    </div>
+        <a href="#creations" style="text-decoration:none; color:#1e293b; font-weight:bold; font-size:12px; padding: 6px 10px; border-radius: 20px; transition: 0.3s;" onmouseover="this.style.backgroundColor='#f1f5f9'" onmouseout="this.style.backgroundColor='transparent'">💡 الفكرة</a>
 
-    <div class="space-y-4">
-        <div class="bg-indigo-50 p-6 rounded-3xl border-r-8 border-indigo-500">
-            <div class="flex items-center gap-3 mb-2">
-                <span class="text-xl">📵</span>
-                <h4 class="font-bold text-indigo-950">تشتت انتباه الآباء</h4>
-            </div>
-            <p class="text-sm text-indigo-900/80 leading-relaxed">
-                <span class="font-black text-indigo-600">51%</span> من المراهقين يشعرون بالإهمال الرقمي لأن والديهم ينشغلون بهواتفهم أثناء المحادثات.
-            </p>
-        </div>
-
-        <div class="bg-amber-50 p-6 rounded-3xl border-r-8 border-amber-500">
-            <div class="flex items-center gap-3 mb-2">
-                <span class="text-xl">🚧</span>
-                <h4 class="font-bold text-amber-950">الحواجز الصامتة</h4>
-            </div>
-            <p class="text-sm text-amber-900/80 leading-relaxed">
-                <span class="font-black text-amber-600">72%</span> من الآباء يعانون من تشتت أبنائهم، مما يخلق فجوة تواصل صامتة داخل المنزل الواحد.
-            </p>
-        </div>
-
-        <div class="bg-emerald-50 p-6 rounded-3xl border-r-8 border-emerald-500">
-            <div class="flex items-center gap-3 mb-2">
-                <span class="text-xl">💡</span>
-                <h4 class="font-bold text-emerald-950">مفارقة الإبداع</h4>
-            </div>
-            <p class="text-sm text-emerald-900/80 leading-relaxed">
-                رغم التحديات، يؤمن <span class="font-black text-emerald-600">81%</span> من الآباء بأن التكنولوجيا تفتح آفاقاً للتعلم والابتكار لأبنائهم.
-            </p>
-        </div>
     </div>
 </div>
 
-<div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
 
-    <div style="text-align:center; width:200px;">
-        <img src="MBZ.PNG" style="width:300px; height:300px; object-fit:cover; border-radius:20px;">
-        <p style="word-wrap:break-word;">
-            "الأسرة هي الركيزة الأساسية في بناء المجتمع.."
-        </p>
-        <p>— الشيخ محمد بن زايد</p>
+	<!-- Hero Section -->
+	<section id="home" class="pt-32 pb-20 hero-gradient text-white">
+		<div class="max-w-7xl mx-auto px-4 text-center">
+			<h1 class="text-4xl md:text-6xl font-bold mb-6 italic leading-tight">عقلك هو القائد <br class="md:hidden"> والتقنية هي الوسيلة</h1>
+			<p class="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">مبادرة توعوية تهدف لتعزيز الإنسانية والوعي في عصر الخوارزميات، تحت إشراف طالبات الصف الثامن بمدرسة الفجيرة.</p>
+			<div class="flex flex-wrap justify-center gap-4"> <a href="#problem" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-full font-bold transition shadow-lg w-full sm:w-auto">السيناريو</a> <a href="#library" class="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-full font-bold transition border border-white/30 w-full sm:w-auto">تصفح المكتبة</a> </div>
+		</div>
+	</section>
+	<!-- Problem Section -->
+	<section id="problem" class="py-20 bg-white">
+		<div class="max-w-6xl mx-auto px-4">
+			<div class="grid lg:grid-cols-2 gap-12 items-start">
+				<div class="bg-slate-50 p-8 md:p-10 rounded-[3rem] border border-slate-200 shadow-sm">
+					<div class="flex items-center gap-3 mb-6 text-indigo-600"> <span class="text-3xl">🎬</span>
+						<h2 class="text-2xl font-bold italic">سيناريو من واقعنا</h2> </div>
+					<div class="space-y-4 text-slate-700 leading-relaxed text-lg">
+						<p> في مكاتبنا وفصولنا الدراسية، أصبحت التكنولوجيا المحرك الأساسي؛ الحواسيب تعد التقارير، والذكاء الاصطناعي يصمم المشاريع. لكن خلف هذا الجمال التنظيمي، بدأت تظهر فجوة عميقة. </p>
+						<div class="bg-white p-6 rounded-2xl border-r-4 border-amber-400 shadow-sm italic"> "في أحد المواقف، قدم فريق مشروعاً عن <span class="font-bold text-slate-900">'وظائف المستقبل'</span> مستخدماً الذكاء الاصطناعي بالكامل. العرض كان مبهراً، لكن عند النقاش، ساد الصمت.. لم يتمكنوا من شرح التفاصيل لأنهم لم يشاركوا في التفكير أو التحليل المتعمق." </div>
+						<p class="font-bold text-indigo-900 mt-6"> هنا يطرح السؤال نفسه: هل التكنولوجيا وسيلة لتطويرنا، أم أنها بدأت تقوم بالعمل بدلاً منا؟ </p>
+					</div>
+				</div>
+				<div>
+					<h2 class="text-3xl font-bold text-indigo-950 mb-8 pr-4">لماذا نبحث عن الحل؟</h2>
+					<div class="grid gap-4">
+						<div class="p-5 bg-white border border-slate-100 rounded-2xl flex items-start gap-4 hover:shadow-md transition">
+							<div class="w-12 h-12 bg-indigo-100 rounded-full flex-shrink-0 flex items-center justify-center text-xl text-indigo-600">⚖️</div>
+							<div>
+								<h4 class="font-bold text-indigo-900">التوازن الرقمي</h4>
+								<p class="text-sm text-slate-600">موازنة استخدام التكنولوجيا مع مهارات العقل البشري.</p>
+							</div>
+						</div>
+						<div class="p-5 bg-white border border-slate-100 rounded-2xl flex items-start gap-4 hover:shadow-md transition">
+							<div class="w-12 h-12 bg-emerald-100 rounded-full flex-shrink-0 flex items-center justify-center text-xl text-emerald-600">🛡️</div>
+							<div>
+								<h4 class="font-bold text-emerald-900">حماية الإبداع</h4>
+								<p class="text-sm text-slate-600">مواجهة ضعف التفكير الناتج عن الاعتماد الكلي على الآلة.</p>
+							</div>
+						</div>
+						<div class="p-5 bg-white border border-slate-100 rounded-2xl flex items-start gap-4 hover:shadow-md transition">
+							<div class="w-12 h-12 bg-amber-100 rounded-full flex-shrink-0 flex items-center justify-center text-xl text-amber-600">🚀</div>
+							<div>
+								<h4 class="font-bold text-amber-900">بناء المستقبل</h4>
+								<p class="text-sm text-slate-600">إعداد جيل يجمع بين التقنية والابتكار الشخصي.</p>
+							</div>
+						</div>
+						<div class="p-5 bg-white border border-slate-100 rounded-2xl flex items-start gap-4 hover:shadow-md transition">
+							<div class="w-12 h-12 bg-rose-100 rounded-full flex-shrink-0 flex items-center justify-center text-xl text-rose-600">🎯</div>
+							<div>
+								<h4 class="font-bold text-rose-900">الاستخدام المسؤول</h4>
+								<p class="text-sm text-slate-600">ترسيخ التكنولوجيا كوسيلة "دعم" لا "بديل".</p>
+							</div>
+						</div>
+						<div class="p-5 bg-indigo-900 text-white rounded-2xl flex items-start gap-4 shadow-lg">
+							<div class="w-12 h-12 bg-white/10 rounded-full flex-shrink-0 flex items-center justify-center text-xl">🌐</div>
+							<div>
+								<h4 class="font-bold">مواكبة العصر</h4>
+								<p class="text-sm text-indigo-100">معالجة أثر الذكاء الاصطناعي المباشر على حياتنا.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="outcomes-modern" class="py-24 bg-slate-50 relative overflow-hidden">
+		<div class="absolute top-0 left-0 w-64 h-64 bg-indigo-100 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-50"></div>
+		<div class="max-w-7xl mx-auto px-4 relative z-10">
+			<div class="text-center mb-16"> <span class="px-4 py-1 bg-indigo-600 text-white rounded-full text-xs font-bold tracking-widest uppercase">The Pipeline</span>
+				<h2 class="text-4xl font-black text-indigo-950 mt-4 mb-2 italic">مختبر النتائج والوثائق</h2>
+				<p class="text-slate-500 font-medium">تحويل التخطيط إلى مخرجات ملموسة مدعومة بالمصادر</p>
+			</div>
+			<section class="py-16 bg-slate-50">
+				<div class="max-w-5xl mx-auto px-4">
+					<div class="text-center mb-16">
+						<h2 class="text-3xl font-bold text-slate-800 mb-4">من الفكرة إلى الأثر: رحلة الابتكار</h2>
+						<p class="text-slate-600 max-w-2xl mx-auto">اتبعنا منهجية التفكير التصميمي لضمان تقديم حلول حقيقية ومستدامة للتحديات الرقمية.</p>
+					</div>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+						<div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-blue-500 card-hover">
+							<div class="flex items-center mb-4"> <span class="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold ml-3">1</span>
+								<h3 class="text-lg font-bold text-slate-800">فهم الوضع</h3> </div>
+							<p class="text-sm text-slate-600">دراسة السيناريو الرابع وتحليل واقع استخدام التكنولوجيا في المدارس والشركات.</p>
+						</div>
+						<div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-indigo-500 card-hover">
+							<div class="flex items-center mb-4"> <span class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold ml-3">2</span>
+								<h3 class="text-lg font-bold text-slate-800">تحديد المشكلة</h3> </div>
+							<p class="text-sm text-slate-600">رصد التحدي: الاعتماد المفرط على التقنية الذي أضعف مهارات التفكير الإبداعي لدى الأفراد وكتابة بيان واضح للمشكلة.</p>
+						</div>
+						<div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-purple-500 card-hover">
+							<div class="flex items-center mb-4"> <span class="w-8 h-8 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center font-bold ml-3">3</span>
+								<h3 class="text-lg font-bold text-slate-800">تقديم الحلول</h3> </div>
+							<p class="text-sm text-slate-600">عصف ذهني للفريق واختيار فكرة منصة "عقول تصنع" كأداة لتعزيز الوعي الرقمي.</p>
+						</div>
+						<div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-amber-500 card-hover">
+							<div class="flex items-center mb-4"> <span class="w-8 h-8 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center font-bold ml-3">4</span>
+								<h3 class="text-lg font-bold text-slate-800">النمذجة (Prototyping)</h3> </div>
+							<p class="text-sm text-slate-600">برمجة واجهة الموقع التفاعلية وتصميم "تحدي العقول" والرسوم البيانية الإحصائية.</p>
+						</div>
+						<div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-emerald-500 card-hover">
+							<div class="flex items-center mb-4"> <span class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center font-bold ml-3">5</span>
+								<h3 class="text-lg font-bold text-slate-800">اختبار الحل وتحسينه</h3> </div>
+							<p class="text-sm text-slate-600">عرض الموقع على الزملاء، جمع الملاحظات، وتطوير المحتوى ليكون أكثر تأثيراً.</p>
+						</div>
+						<div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-rose-500 card-hover">
+							<div class="flex items-center mb-4"> <span class="w-8 h-8 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center font-bold ml-3">6</span>
+								<h3 class="text-lg font-bold text-slate-800">الحل النهائي</h3> </div>
+							<p class="text-sm text-slate-600">إطلاق منصة "عقول تصنع" المتكاملة وربطها بأهداف الاستدامة وجودة الحياة الرقمية.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Statistics Section -->
+			<section id="stats" class="py-20 bg-slate-900 text-white overflow-hidden">
+				<div class="max-w-7xl mx-auto px-4">
+					<div class="text-center mb-16">
+						<h2 class="text-4xl font-black mb-4 tracking-tight italic">نتائج استبيان الوعي الرقمي</h2>
+						<div class="h-1.5 w-32 bg-indigo-500 mx-auto rounded-full mb-6"></div>
+						<p class="text-slate-400 max-w-2xl mx-auto text-lg font-light">تحليل تفصيلي لاستجابات طلاب الصف الثامن (13-14 عاماً) حول عاداتهم الرقمية.</p>
+					</div>
+					<div class="grid lg:grid-cols-12 gap-12 items-start">
+						<div class="lg:col-span-8 bg-white p-10 rounded-[3rem] shadow-2xl relative border border-slate-200">
+							<div class="mb-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+								<h4 class="font-black text-slate-900 text-xl italic underline decoration-indigo-500 decoration-4 underline-offset-8">مؤشرات السلوك الرقمي</h4>
+								<div class="flex gap-6 text-xs font-bold bg-slate-50 p-3 rounded-2xl"> <span class="flex items-center gap-2 text-indigo-600"><div class="w-4 h-4 bg-indigo-600 rounded-md"></div> التركيز الذاتي</span> <span class="flex items-center gap-2 text-amber-500"><div class="w-4 h-4 bg-amber-500 rounded-md"></div> التشتت الرقمي</span> </div>
+							</div>
+							<div class="relative h-[400px] w-full flex items-end justify-around gap-4 pb-10 pr-10 border-r-2 border-b-2 border-slate-100">
+								<div class="absolute -right-12 inset-y-0 flex flex-col justify-between text-[10px] font-bold text-slate-400 pb-10"> <span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span> </div>
+								<div class="flex flex-col items-center gap-4 w-full group relative">
+									<div class="flex items-end gap-2 h-[250px]">
+										<div class="bg-indigo-100 w-5 md:w-8 rounded-t-xl transition-all duration-1000" style="height: 15%;"></div>
+										<div class="bg-indigo-600 w-5 md:w-8 rounded-t-xl transition-all duration-700 group-hover:scale-y-105 origin-bottom relative shadow-lg shadow-indigo-200" style="height: 85%;"> <span class="absolute -top-8 left-1/2 -translate-x-1/2 text-indigo-600 font-black text-xs">85%</span> </div>
+									</div> <span class="text-[11px] font-black text-slate-500 text-center leading-tight">التحقق<br>اللاإرادي</span> </div>
+								<div class="flex flex-col items-center gap-4 w-full group relative">
+									<div class="flex items-end gap-2 h-[250px]">
+										<div class="bg-amber-100 w-5 md:w-8 rounded-t-xl transition-all duration-1000" style="height: 30%;"></div>
+										<div class="bg-amber-500 w-5 md:w-8 rounded-t-xl transition-all duration-700 group-hover:scale-y-105 origin-bottom relative shadow-lg shadow-amber-200" style="height: 70%;"> <span class="absolute -top-8 left-1/2 -translate-x-1/2 text-amber-600 font-black text-xs">70%</span> </div>
+									</div> <span class="text-[11px] font-black text-slate-500 text-center leading-tight">استنزاف<br>الوقت</span> </div>
+								<div class="flex flex-col items-center gap-4 w-full group relative">
+									<div class="flex items-end gap-2 h-[250px]">
+										<div class="bg-rose-100 w-5 md:w-8 rounded-t-xl transition-all duration-1000" style="height: 8%;"></div>
+										<div class="bg-rose-500 w-5 md:w-8 rounded-t-xl transition-all duration-700 group-hover:scale-y-105 origin-bottom relative shadow-lg shadow-rose-200" style="height: 92%;"> <span class="absolute -top-8 left-1/2 -translate-x-1/2 text-rose-600 font-black text-xs">92%</span> </div>
+									</div> <span class="text-[11px] font-black text-indigo-900 text-center leading-tight font-black">الهروب<br>الرقمي</span> </div>
+								<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-40 pr-10 pb-10">
+									<div class="border-t border-dashed border-slate-200 w-full"></div>
+									<div class="border-t border-dashed border-slate-200 w-full"></div>
+									<div class="border-t border-dashed border-slate-200 w-full"></div>
+									<div class="border-t border-dashed border-slate-200 w-full"></div>
+								</div>
+							</div>
+							<div class="mt-6 flex items-center gap-2 text-slate-400 text-[10px] italic"> <span>*</span>
+								<p>البيانات مستندة إلى إجابات الطلاب على مقياس من 0 إلى 10[cite: 5, 9].</p>
+							</div>
+						</div>
+						<div class="lg:col-span-4 space-y-4">
+							<div class="bg-indigo-600 p-8 rounded-[2.5rem] text-white shadow-xl shadow-indigo-900/20">
+								<h5 class="font-bold text-lg mb-2">أبرز الملاحظات:</h5>
+								<ul class="text-sm space-y-4 opacity-90">
+									<li class="flex items-start gap-2"><span>•</span> <span>أكثر من <b>90%</b> يستخدمون التقنية كمهرب من تحديات المذاكرة[cite: 25, 29].</span></li>
+									<li class="flex items-start gap-2"><span>•</span> <span><b>8 من أصل 10</b> طلاب يتحققون من هواتفهم دون وجود تنبيهات فعليّة[cite: 3, 7].</span></li>
+									<li class="flex items-start gap-2"><span>•</span> <span>صعوبة بالغة في العودة للتركيز العميق بعد الرد على الرسائل[cite: 12, 16].</span></li>
+								</ul>
+							</div>
+							<div class="p-6 border-2 border-slate-800 rounded-[2.5rem]">
+								<p class="text-slate-400 text-xs italic leading-relaxed">بناءً على "اختبر وعيك الرقمي" - نموذج ميكروسوفت فورمز المرفق[cite: 22, 32].</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Library Section -->
+			<section id="library" class="py-20">
+				<div class="max-w-7xl mx-auto px-4">
+					<div class="text-center mb-16">
+						<div class="inline-block px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-bold mb-4">حلول وعروض</div>
+						<h2 class="text-3xl font-bold text-indigo-900 mb-4 italic">المكتبة الرقمية المرئية</h2>
+						<p class="text-slate-600">تصفحوا إنتاجاتنا المعرفية والمرئية</p>
+					</div>
+					<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+						<!-- Book 1 -->
+						<div class="bg-white rounded-2xl shadow p-6 card-hover border border-slate-100 flex flex-col h-full">
+							<div class="w-full h-40 bg-slate-100 rounded-xl mb-4 flex items-center justify-center text-5xl">🤖</div>
+							<h3 class="text-lg font-bold mb-2 text-indigo-800">كيف لا تصبح روبوتاً</h3>
+							<p class="text-slate-600 text-xs mb-4 flex-grow leading-relaxed">دليل شامل لاستعادة السيطرة على وعيك الرقمي واستراتيجيات عملية.</p> <a href="https://emiratesschoolsese-my.sharepoint.com/:b:/g/personal/stuf20180007741_moe_sch_ae/IQAEa9Qlzij5QLptQPoSW3Y9AQplFelC2bwK7BP5NCv-VlY?e=h6BGDM" target="_blank" class="w-full py-2 bg-indigo-50 text-indigo-700 rounded-lg text-center font-bold text-sm hover:bg-indigo-600 hover:text-white transition">👁️ عرض الكتيب</a> </div>
+						<!-- Book 2 -->
+						<div class="bg-white rounded-2xl shadow p-6 card-hover border border-slate-100 flex flex-col h-full">
+							<div class="w-full h-40 bg-indigo-50 rounded-xl mb-4 flex items-center justify-center text-5xl">🧠</div>
+							<h3 class="text-lg font-bold mb-2 text-indigo-800">عقولٌ تصنع.. تقنياتٌ تتبع</h3>
+							<p class="text-slate-600 text-xs mb-4 flex-grow leading-relaxed">مطوية تلخص جلستنا الحوارية حول إشكالية سرقة التكنولوجيا لبصمتنا الإبداعية.</p> <a href="https://emiratesschoolsese-my.sharepoint.com/:b:/g/personal/stuf20180007741_moe_sch_ae/IQCfBvGjqnujRYT7Jgb8UvRCAbw8YlVysQhnA6b0hIZZitg?e=aBmyVr" target="_blank" class="w-full py-2 bg-indigo-50 text-indigo-700 rounded-lg text-center font-bold text-sm hover:bg-indigo-600 hover:text-white transition">👁️ عرض الملف</a> </div>
+						<!-- Book 3 -->
+						<div class="bg-white rounded-2xl shadow p-6 card-hover border border-slate-100 flex flex-col h-full">
+							<div class="w-full h-40 bg-amber-50 rounded-xl mb-4 flex items-center justify-center text-5xl">🎨</div>
+							<h3 class="text-lg font-bold mb-2 text-indigo-800">مدينة الأزرار الباهتة</h3>
+							<p class="text-slate-600 text-xs mb-4 flex-grow leading-relaxed">قصة ملهمة عن استعادة ألوان المدينة من خلال التفكير المستقل.</p> <a href="https://www.canva.com/design/DAHBZk6rS-o/Kt_PJmuiml2R4Y4cFvipJw/edit?utm_content=DAHBZk6rS-o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="w-full py-2 bg-indigo-50 text-indigo-700 rounded-lg text-center font-bold text-sm hover:bg-indigo-600 hover:text-white transition">👁️ قراءة القصة</a> </div>
+						<!-- Book 4 - تعديل اللون ليصبح متناسقاً (Indigo) -->
+						<div class="bg-white rounded-2xl shadow p-6 card-hover border border-slate-100 flex flex-col h-full">
+							<div class="w-full h-40 bg-indigo-100 rounded-xl mb-4 flex items-center justify-center text-5xl">🎤</div>
+							<h3 class="text-lg font-bold mb-2 text-indigo-800">مشاهدة المناظرة</h3>
+							<p class="text-slate-600 text-xs mb-4 flex-grow leading-relaxed">فيديو يوثق مناظرة فكرية حية حول تأثير التقنية على وعي الأجيال القادمة.</p> <a href="https://emiratesschoolsese-my.sharepoint.com/:v:/g/personal/stuf20180007741_moe_sch_ae/IQDYspsZIhFdS43oUfk25hoVAQ262VVSJWinYqrlsoZUrSA?nav=eyJyZWZlcnJlclNvdXJjZSI6T3RoZXIiLCJyZWZlcnJlclVuaXQiOiJleHBsb3JlciIsIndpdGhtZW51Ijp0cnVlLCJmZmVhdHVyZSI6IklNeVpXciIsImNlbnRlcmlkIjoiaNEUZpbgVzTGlua0NvcHkifX0&e=diskCe" target="_blank" class="w-full py-2 bg-indigo-600 text-white rounded-lg text-center font-bold text-sm hover:bg-indigo-700 transition shadow-md">🎬 الانتقال للفيديو</a> </div>
+					</div>
+				</div>
+			</section>
+			
+			
+		
+<section class="min-h-screen">
+    <div id="selectionScreen">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+			
+			<section id="values-gallery" class="py-20 bg-white border-y border-slate-100" dir="rtl">
+				<div class="max-w-7xl mx-auto px-4">
+					<div class="text-center mb-16"> <span class="inline-block px-4 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-bold mb-4">قيمنا الأصيلة</span>
+						<h2 class="text-3xl md:text-4xl font-black text-indigo-950 mb-4 italic">العقول تبدع.. والقيم تجمع</h2>
+						<p class="text-slate-600 max-w-2xl mx-auto text-lg">نستمد إلهامنا من قادتنا وتراثنا لبناء جيل يجمع بين ذكاء العقل ودفء القلب.</p>
+					</div>
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+						<div class="group relative overflow-hidden rounded-[2rem] shadow-lg aspect-[3/4] card-hover border-4 border-white hover:border-indigo-100"> <img src="MBR2.jpg" alt="صاحب السمو الشيخ محمد بن راشد آل مكتوم" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+							<div class="absolute inset-0 bg-gradient-to-t from-indigo-950/90 to-transparent flex flex-col justify-end p-6 text-white text-right">
+								<h4 class="font-bold text-lg mb-1">رؤية قائد</h4>
+								<p class="text-xs text-slate-200">صناعة المستقبل لا تعتمد على التقنية وحدها، بل على العقول التي تديرها.</p>
+							</div>
+						</div>
+						<div class="group relative overflow-hidden rounded-[2rem] shadow-lg aspect-[3/4] card-hover border-4 border-white hover:border-amber-100"> <img src="sheikh-zayed.png" alt="الشيخ زايد والأسرة" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+							<div class="absolute inset-0 bg-gradient-to-t from-amber-950/90 to-transparent flex flex-col justify-end p-6 text-white text-right">
+								<h4 class="font-bold text-lg mb-1">إرث الخمسين</h4>
+								<p class="text-xs text-slate-200">الأسرة هي اللبنة الأولى لبناء مجتمع قوي ومتماسك.</p>
+							</div>
+						</div>
+						<div class="group relative overflow-hidden rounded-[2rem] shadow-lg aspect-[3/4] card-hover border-4 border-white hover:border-emerald-100"> <img src="MBZ W.jpg" alt="صاحب السمو الشيخ محمد بن زايد والجيل الصاعد" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+							<div class="absolute inset-0 bg-gradient-to-t from-emerald-950/90 to-transparent flex flex-col justify-end p-6 text-white text-right">
+								<h4 class="font-bold text-lg mb-1">جيل الغد</h4>
+								<p class="text-xs text-slate-200">الاستثمار في الإنسان هو أعظم استثمار لمستقبل الإمارات.</p>
+							</div>
+						</div>
+						<div class="group relative overflow-hidden rounded-[2rem] shadow-lg aspect-[3/4] card-hover border-4 border-white hover:border-rose-100 flex items-center justify-center p-8 bg-slate-50"> <img src="com.png" alt="شعار عام المجتمع 54" class="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105">
+							<div class="absolute inset-x-0 bottom-0 bg-rose-950/90 p-6 text-white text-center rounded-t-3xl">
+								<h4 class="font-bold text-lg mb-1">روح المجتمع</h4>
+								<p class="text-xs text-rose-100">نعمل معاً، عقولاً وقلوباً، لتعزيز الوعي الرقمي في مجتمعنا.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="vision-section" class="py-16 bg-white border-t-4 border-indigo-50">
+			<section class="py-16 bg-white border-t-4 border-indigo-50">
+				<div class="max-w-6xl mx-auto px-6">
+					<div class="mb-12 text-center">
+						<h2 class="text-3xl font-bold text-slate-900 mb-6">رؤية القيادة: من الوعي إلى الترابط</h2>
+						<div class="max-w-3xl mx-auto p-6 bg-indigo-50 rounded-2xl border-r-8 border-indigo-600 text-right">
+							<p class="text-lg text-slate-800 leading-relaxed"> بعد رصد التحديات التي فرضتها النهضة التكنولوجية المتسارعة، وما تبعها من زيادة في ملامح التفكك الأسري وانشغال الأفراد بالعوالم الافتراضية، انطلقت القيادة الرشيدة من هذا المنطلق لتسمية هذا العام بـ <span class="font-bold text-indigo-700 underline">"عام الأسرة"</span>. تهدف هذه الرؤية إلى استعادة دفء العلاقات الواقعية وتحصين المجتمع من العزلة الرقمية. </p>
+							<div class="mt-4 font-bold text-indigo-900 italic"> Slogan: "أسرة متماسكة.. مجتمع واعي" </div>
+						</div>
+					</div>
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+						<div class="bg-white p-8 rounded-[2.5rem] shadow-xl border border-slate-100 text-center transition-all hover:shadow-2xl">
+							<h3 class="text-xl font-black text-indigo-950 mb-2 italic">المفارقة الرقمية في العلاقات الأسرية</h3>
+							<p class="text-[10px] text-slate-400 mb-6 font-bold uppercase tracking-widest">تحليل الفجوة السلوكية بين الآباء والأبناء</p> <img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['تشتت الآباء','تشتت الأبناء','الأثر الإيجابي'],datasets:[{label:'نسبة التأثير (%)',data:[51,72,81],backgroundColor:['%236366f1','%23f59e0b','%2310b981'],borderRadius:10}]}}" alt="إحصاءات التواصل الأسري - دراسة بيو" class="w-full rounded-2xl shadow-inner bg-slate-50 p-4">
+							<div class="mt-6 py-3 border-t border-slate-100 flex justify-between items-center px-2"> <span class="text-[10px] text-indigo-600 font-black">الدراسة الأحدث عالمياً</span>
+								<p class="text-[10px] text-slate-500 font-bold"> المصدر: مركز بيو للأبحاث (Pew Research Center) </p>
+							</div>
+						</div>
+						<div class="space-y-4">
+							<div class="bg-indigo-50 p-6 rounded-3xl border-r-8 border-indigo-500">
+								<div class="flex items-center gap-3 mb-2"> <span class="text-xl">📵</span>
+									<h4 class="font-bold text-indigo-950">تشتت انتباه الآباء</h4> </div>
+								<p class="text-sm text-indigo-900/80 leading-relaxed"> <span class="font-black text-indigo-600">51%</span> من المراهقين يشعرون بالإهمال الرقمي لأن والديهم ينشغلون بهواتفهم أثناء المحادثات. </p>
+							</div>
+							<div class="bg-amber-50 p-6 rounded-3xl border-r-8 border-amber-500">
+								<div class="flex items-center gap-3 mb-2"> <span class="text-xl">🚧</span>
+									<h4 class="font-bold text-amber-950">الحواجز الصامتة</h4> </div>
+								<p class="text-sm text-amber-900/80 leading-relaxed"> <span class="font-black text-amber-600">72%</span> من الآباء يعانون من تشتت أبنائهم، مما يخلق فجوة تواصل صامتة داخل المنزل الواحد. </p>
+							</div>
+							<div class="bg-emerald-50 p-6 rounded-3xl border-r-8 border-emerald-500">
+								<div class="flex items-center gap-3 mb-2"> <span class="text-xl">💡</span>
+									<h4 class="font-bold text-emerald-950">مفارقة الإبداع</h4> </div>
+								<p class="text-sm text-emerald-900/80 leading-relaxed"> رغم التحديات، يؤمن <span class="font-black text-emerald-600">81%</span> من الآباء بأن التكنولوجيا تفتح آفاقاً للتعلم والابتكار لأبنائهم. </p>
+							</div>
+						</div>
+					</div>
+					<div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+						<div style="text-align:center; width:200px;"> <img src="MBZ.PNG" style="width:300px; height:300px; object-fit:cover; border-radius:20px;">
+							<p style="word-wrap:break-word;"> "الأسرة هي الركيزة الأساسية في بناء المجتمع.." </p>
+							<p>— الشيخ محمد بن زايد</p>
+						</div>
+						<div style="text-align:center; width:200px;"> <img src="MBR.PNG" style="width:300px; height:300px; object-fit:cover; border-radius:20px;">
+							<p style="word-wrap:break-word;"> "قوة مجتمعنا في قوة أسرنا.." </p>
+							<p>— الشيخ محمد بن راشد</p>
+						</div>
+					</div>
+				</div>
+<div class="mt-20 flex flex-col md:flex-row items-center justify-center gap-8 bg-indigo-900 p-10 rounded-[3rem] text-white shadow-2xl mx-4">
+    
+    <div class="flex-shrink-0 bg-white p-4 rounded-3xl shadow-lg transform -rotate-3">
+        <img src="faam.png" alt="Logo" class="h-40 w-auto object-contain">
     </div>
 
-    <div style="text-align:center; width:200px;">
-        <img src="MBR.PNG" style="width:300px; height:300px; object-fit:cover; border-radius:20px;">
-        <p style="word-wrap:break-word;">
-            "قوة مجتمعنا في قوة أسرنا.."
+    <div class="max-w-2xl text-right">
+        <h3 class="text-2xl md:text-3xl font-black mb-4 italic leading-tight">
+          <span class="text-amber-400 underline italic">عام الأسرة</span>
+        </h3>
+        <p class="text-indigo-100 text-lg leading-relaxed">
+            .عام الاسرة يعزز الترابط الأسري من خلال زيادة التواصل المباشر بين الأفراد، ويحدّ من الإفراط في استخدام التكنولوجيا عبر تشجيع قضاء الوقت مع العائلة
         </p>
-        <p>— الشيخ محمد بن راشد</p>
     </div>
-
 </div>
 
-
-
-        </div>
-
-        <div class="mt-12 flex justify-center">
-             <img src="faam.png" alt="Logo" class="h-24 opacity-90">
-        </div>
-    </div>
-</section>
-
-	<section class="py-16 bg-white">
-	<div class="text-center mb-12">
-    <h2 class="text-4xl font-black text-indigo-950 italic mb-4">
+<div class="pb-10"></div>
+		</div>
+		</section>
+		<section class="py-16 bg-white">
+			<div class="text-center mb-12">
+				<h2 class="text-4xl font-black text-indigo-950 italic mb-4">
 الرؤية الإماراتية لعام 2031    </h2>
-    <div class="w-24 h-1 bg-indigo-600 mx-auto rounded-full"></div> </div>
-    <div class="max-w-6xl mx-auto px-4">
-        <div class="flex flex-col lg:flex-row items-center gap-8 bg-slate-50 rounded-[3rem] overflow-hidden shadow-sm border border-slate-100 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-100/50">
-            
-            <div class="lg:w-1/2 w-full p-6 flex items-center justify-center bg-white/50">
-                <div class="overflow-hidden rounded-2xl">
-                    <img src="stra.png" alt="إحصائيات الاستراتيجية الوطنية" 
-                         class="w-full h-auto max-h-[450px] object-contain transition-transform duration-700 ease-in-out hover:scale-110">
-                </div>
-            </div>
-
-            <div class="lg:w-1/2 w-full p-8 lg:p-12 space-y-6">
-                <div class="inline-block px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-bold mb-2">
-                    رؤية الإمارات 2031
-                </div>
-                
-                <h2 class="text-3xl font-black text-slate-900 leading-tight italic">
+				<div class="w-24 h-1 bg-indigo-600 mx-auto rounded-full"></div>
+			</div>
+			<div class="max-w-6xl mx-auto px-4">
+				<div class="flex flex-col lg:flex-row items-center gap-8 bg-slate-50 rounded-[3rem] overflow-hidden shadow-sm border border-slate-100 transition-all duration-500 hover:shadow-xl hover:shadow-indigo-100/50">
+					<div class="lg:w-1/2 w-full p-6 flex items-center justify-center bg-white/50">
+						<div class="overflow-hidden rounded-2xl"> <img src="stra.png" alt="إحصائيات الاستراتيجية الوطنية" class="w-full h-auto max-h-[450px] object-contain transition-transform duration-700 ease-in-out hover:scale-110"> </div>
+					</div>
+					<div class="lg:w-1/2 w-full p-8 lg:p-12 space-y-6">
+						<div class="inline-block px-4 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-bold mb-2"> رؤية الإمارات 2031 </div>
+						<h2 class="text-3xl font-black text-slate-900 leading-tight italic">
                     تمكين الإنسان.. <br> 
                     <span class="text-indigo-600">جوهر الاستراتيجية الوطنية</span>
                 </h2>
-
-                <div class="space-y-4 text-slate-600 text-lg leading-relaxed">
-                    <p>
-                        تتبنى دولة الإمارات رؤية استباقية تسخر التقنية لخدمة البشرية، مؤكدة أن <strong>الذكاء الاصطناعي</strong> أداة لتعزيز القدرات لا لاستبدالها.
-                    </p>
-                    
-                    <p>
-                        ننتقل بطلبتنا من مرحلة "الاستهلاك الرقمي" إلى "الإنتاج الواعي"، مما ساهم في رفع مستويات <strong>الأمن الرقمي</strong> والوعي المجتمعي.
-                    </p>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl border-r-8 border-indigo-600 shadow-sm">
-                    <p class="text-indigo-900 font-medium italic">
-                        "التكنولوجيا قوة لتمكين الإنسان وليست بديلاً عن جوهر فكره؛ وهذا هو المحرك الأساسي لمنصتنا."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-<section id="challenge" class="py-20 bg-indigo-50" dir="rtl">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
-    
-    <style>
-        #challenge { font-family: 'Tajawal', sans-serif; }
-    </style>
-
-    <div class="max-w-4xl mx-auto px-4 text-center">
-        <div class="bg-white p-10 rounded-[3rem] shadow-xl border-2 border-indigo-100">
-            <h2 class="text-3xl font-bold text-indigo-950 mb-4">🧠 تحدي "عقول تصنع" اليومي</h2>
-            <p class="text-slate-600 mb-8 text-lg">استعدي لتجربة تفصلك عن الشاشة وتفعّل قدراتك الإنسانية!</p>
-            
-            <div id="displayArea" class="border-2 border-dashed border-slate-300 rounded-2xl p-8 mb-8 min-h-[140px] flex items-center justify-center transition-all duration-500 bg-slate-50">
-                <p id="taskText" class="text-slate-400 italic text-xl font-medium">اضغطي على الزر لاختيار تحدي عشوائي...</p>
-            </div>
-
-            <button onclick="generateTask()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-12 rounded-full transition-all transform active:scale-95 shadow-lg text-lg hover:shadow-indigo-200">
-                تحدي جديد ✨
-            </button>
-        </div>
-    </div>
-
-<script>
-        // مصفوفة التحديات الـ 50 (محدثة ومنظمة)
-        const humanTasks = [
-            "تعلمي عقدة 'رابطة المربع' باستخدام خيط أو حبل 🪢",
-            "ارسمي شكلاً هندسياً ثلاثي الأبعاد بظل حقيقي ✍️",
-            "تعلمي طي ورقة على شكل طائرة احترافية ✈️",
-            "جربي كتابة اسمك بالخط الكوفي أو الرقعة ✒️",
-            "اصنعي شكلاً من أشكال الأوريجامي (قارب أو وردة) 🌷",
-            "تعلمي طريقة ربط الحذاء بشكل سريع ومبتكر 👟",
-            "ارسمي خريطة ذهنية لمهامك الدراسية 🗺️",
-            "جربي دمج ألوان الطعام لاكتشاف لون جديد 🎨",
-            "تعلمي اختصاراً جديداً في لوحة المفاتيح ⌨️",
-            "قومي بحل لغز 'سودوكو' بمستوى سهل 🧩",
-            "تعلمي كيفية قراءة الساعة العقارب بسرعة 🕒",
-            "ابحثي عن معنى 'الذكاء الاصطناعي التوليدي' 🤖",
-            "اكتبي جملة على الكيبورد وأنتِ مغمضة العينين 🙈",
-            "تعلمي كيفية تحويل صورة إلى ملف PDF 📄",
-            "ابحثي عن مهارة 'البحث المتقدم' في جوجل 🔍",
-            "احفظي 5 كلمات جديدة بلغة مختلفة 🌏",
-            "تعلمي كيف تقولين 'شكراً' بـ 10 لغات 🗣️",
-            "اقرئي فقرة إنجليزية ولخصيها بكلماتك 📚",
-            "تعلمي حكمة أو شعراً جديداً وردديه بطلاقة 🎙️",
-            "حاولي تهجئة الكلمات الطويلة بالعكس 🧠",
-            "اكتبي فقرة قصيرة بيدك اليسرى ✍️",
-            "احفظي أسماء 5 كواكب وميزاتها بالترتيب 🪐",
-            "تعلمي كيفية قراءة الملصق الغذائي بدقة 🍎",
-            "جربي ترتيب مكتبك بطريقة 'كونماري' 🧹",
-            "تعلمي كيف تطلبين شيئاً بأسلوب دبلوماسي ✨",
-            "حضري وجبة خفيفة صحية وزينيها فنياً 🥪",
-            "تعلمي طريقة طي الملابس بسرعة المحترفين 👕",
-            "تدربي على وقفة الثقة أمام المرآة 💃",
-            "اسألي شخصاً كبيراً عن قصة من تراث الفجيرة 🇦🇪",
-            "تعلمي كيف تقيسين نبضات قلبك يدوياً 💓",
-            "قفي على قدم واحدة لمدة دقيقة كاملة 🧘",
-            "تدربي على تدوير القلم حول أصابعك 🖋️",
-            "تعلمي التنفس المربع (4-4-4) للهدوء 🌬️",
-            "حاولي قذف كرتين وتبديلهما بيد واحدة 🤹",
-            "تعلمي كيفية القاء الشعر",
-            "قومي بتمارين الضغط (5 مرات) بوضعية صحيحة 💪",
-            "تدربي على المشي بوضع كتاب فوق رأسك 📖",
-            "راقبي 3 أنواع مختلفة من الطيور أو الحشرات 🦋",
-            "صوري صورة فوتوغرافية من زاوية النملة 📸",
-            "اكتبي قائمة بـ 10 استخدامات لمشبك الورق 📎",
-            "اكتبي أول جملة ستقولينها على المريخ 🚀",
-            "صممي شعاراً مبتكراً لاسمك الشخصي 🏷️",
-            "وصفي غرضاً في غرفتك بخمس حواس 🔍",
-            "ابحثي عن تطبيق مفتوح المصدر (FOSS) مفيد 📱",
-            "تعلمي كيفية إيقاف الإشعارات المزعجة 📵",
-            "اكتبي 'كوداً' بالورقة يصف روتينك الصباحي 💻",
-            "لخصي رؤية الإمارات للأسرة في ثلاث جمل 🇦🇪",
-            "صممي واجهة تطبيق (UI) بسيطة على الورق 🎨",
-            "تعلمي كشف الخبر الزائف على الإنترنت 🚫",
-            "اكتبي نصيحة لتقليل 'وقت الشاشة' بطريقة ممتعة 📱"
-        ]; // إغلاق المصفوفة بشكل صحيح
-
-        function generateTask() {
-            const textElement = document.getElementById('taskText');
-            const displayDiv = document.getElementById('displayArea');
-            
-            // تأثير الانتظار
-            textElement.innerText = "جاري اختيار تحدي ذكي...";
-            textElement.className = "text-indigo-400 italic animate-pulse text-xl";
-            displayDiv.className = "border-2 border-dashed border-indigo-500 rounded-2xl p-8 mb-8 min-h-[140px] flex items-center justify-center bg-indigo-50 transition-all duration-300";
-
-            setTimeout(() => {
-                const randomIndex = Math.floor(Math.random() * humanTasks.length);
-                
-                textElement.innerText = humanTasks[randomIndex];
-                textElement.className = "text-indigo-900 font-bold text-2xl animate-bounce leading-relaxed";
-                
-                displayDiv.className = "border-2 border-solid border-indigo-600 rounded-2xl p-8 mb-8 min-h-[140px] flex items-center justify-center bg-indigo-100 shadow-inner transition-all duration-300";
-            }, 800);
-        }
-    </script>
-	
-	<section id="challenge" class="py-20 bg-gradient-to-b from-indigo-50 to-white">
-   </section>
-   
-   
-
-    </section>
-	<section id="padlet-section" class="py-20 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-indigo-900 mb-4 italic">مساحة للبوح الرقمي</h2>
-            <p class="text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                هنا نترك الشاشات جانباً لنستمع إلى صوت العقل. شاركونا تجاربكم، تحدياتكم، ولحظات انتصاركم على التشتت الرقمي. كلماتكم هي الدليل على أن الإرادة البشرية تظل دائماً فوق كل خوارزمية.
-            </p>
-        </div>
-
-        <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
-            <div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4">
-                <p style="padding:0;margin:0">
-                    <iframe src="https://padlet.com/embed/ftyr194kumlztsli" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe>
-                </p>
-                <div style="display:flex;align-items:center;justify-content:end;margin:0;padding:8px 8px 8px 0">
-                    <a href="https://padlet.com?ref=embed" target="_blank">
-                        <img src="https://padlet.net/emails/padlet_email_logo_2026_text-dark-200.png" width="12" style="padding:0;margin:0;border:none;box-shadow:none;display:block" alt="Made with Padlet">
-                    </a>
-                </div>
-            </div>
-        </div>
+						<div class="space-y-4 text-slate-600 text-lg leading-relaxed">
+							<p> تتبنى دولة الإمارات رؤية استباقية تسخر التقنية لخدمة البشرية، مؤكدة أن <strong>الذكاء الاصطناعي</strong> أداة لتعزيز القدرات لا لاستبدالها. </p>
+							<p> ننتقل بطلبتنا من مرحلة "الاستهلاك الرقمي" إلى "الإنتاج الواعي"، مما ساهم في رفع مستويات <strong>الأمن الرقمي</strong> والوعي المجتمعي. </p>
+						</div>
+						<div class="bg-white p-6 rounded-2xl border-r-8 border-indigo-600 shadow-sm">
+							<p class="text-indigo-900 font-medium italic"> "التكنولوجيا قوة لتمكين الإنسان وليست بديلاً عن جوهر فكره؛ وهذا هو المحرك الأساسي لمنصتنا." </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="challenge" class="py-20 bg-indigo-50" dir="rtl">
+			<script src="https://cdn.tailwindcss.com"></script>
+			<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
+			<style>
+			#challenge {
+				font-family: 'Tajawal', sans-serif;
+			}
+			</style>
+			<div class="max-w-4xl mx-auto px-4 text-center">
+				<div class="bg-white p-10 rounded-[3rem] shadow-xl border-2 border-indigo-100">
+					<h2 class="text-3xl font-bold text-indigo-950 mb-4">🧠 تحدي "عقول تصنع" اليومي</h2>
+					<p class="text-slate-600 mb-8 text-lg">استعدي لتجربة تفصلك عن الشاشة وتفعّل قدراتك الإنسانية!</p>
+					<div id="displayArea" class="border-2 border-dashed border-slate-300 rounded-2xl p-8 mb-8 min-h-[140px] flex items-center justify-center transition-all duration-500 bg-slate-50">
+						<p id="taskText" class="text-slate-400 italic text-xl font-medium">اضغطي على الزر لاختيار تحدي عشوائي...</p>
+					</div>
+					<button onclick="generateTask()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-12 rounded-full transition-all transform active:scale-95 shadow-lg text-lg hover:shadow-indigo-200"> تحدي جديد ✨ </button>
+				</div>
+			</div>
+			<script>
+		
+			// مصفوفة التحديات الـ 50 (محدثة ومنظمة)
+			const humanTasks = ["تعلمي عقدة 'رابطة المربع' باستخدام خيط أو حبل 🪢", "ارسمي شكلاً هندسياً ثلاثي الأبعاد بظل حقيقي ✍️", "تعلمي طي ورقة على شكل طائرة احترافية ✈️", "جربي كتابة اسمك بالخط الكوفي أو الرقعة ✒️", "اصنعي شكلاً من أشكال الأوريجامي (قارب أو وردة) 🌷", "تعلمي طريقة ربط الحذاء بشكل سريع ومبتكر 👟", "ارسمي خريطة ذهنية لمهامك الدراسية 🗺️", "جربي دمج ألوان الطعام لاكتشاف لون جديد 🎨", "تعلمي اختصاراً جديداً في لوحة المفاتيح ⌨️", "قومي بحل لغز 'سودوكو' بمستوى سهل 🧩", "تعلمي كيفية قراءة الساعة العقارب بسرعة 🕒", "ابحثي عن معنى 'الذكاء الاصطناعي التوليدي' 🤖", "اكتبي جملة على الكيبورد وأنتِ مغمضة العينين 🙈", "تعلمي كيفية تحويل صورة إلى ملف PDF 📄", "ابحثي عن مهارة 'البحث المتقدم' في جوجل 🔍", "احفظي 5 كلمات جديدة بلغة مختلفة 🌏", "تعلمي كيف تقولين 'شكراً' بـ 10 لغات 🗣️", "اقرئي فقرة إنجليزية ولخصيها بكلماتك 📚", "تعلمي حكمة أو شعراً جديداً وردديه بطلاقة 🎙️", "حاولي تهجئة الكلمات الطويلة بالعكس 🧠", "اكتبي فقرة قصيرة بيدك اليسرى ✍️", "احفظي أسماء 5 كواكب وميزاتها بالترتيب 🪐", "تعلمي كيفية قراءة الملصق الغذائي بدقة 🍎", "جربي ترتيب مكتبك بطريقة 'كونماري' 🧹", "تعلمي كيف تطلبين شيئاً بأسلوب دبلوماسي ✨", "حضري وجبة خفيفة صحية وزينيها فنياً 🥪", "تعلمي طريقة طي الملابس بسرعة المحترفين 👕", "تدربي على وقفة الثقة أمام المرآة 💃", "اسألي شخصاً كبيراً عن قصة من تراث الفجيرة 🇦🇪", "تعلمي كيف تقيسين نبضات قلبك يدوياً 💓", "قفي على قدم واحدة لمدة دقيقة كاملة 🧘", "تدربي على تدوير القلم حول أصابعك 🖋️", "تعلمي التنفس المربع (4-4-4) للهدوء 🌬️", "حاولي قذف كرتين وتبديلهما بيد واحدة 🤹", "تعلمي كيفية القاء الشعر", "قومي بتمارين الضغط (5 مرات) بوضعية صحيحة 💪", "تدربي على المشي بوضع كتاب فوق رأسك 📖", "راقبي 3 أنواع مختلفة من الطيور أو الحشرات 🦋", "صوري صورة فوتوغرافية من زاوية النملة 📸", "اكتبي قائمة بـ 10 استخدامات لمشبك الورق 📎", "اكتبي أول جملة ستقولينها على المريخ 🚀", "صممي شعاراً مبتكراً لاسمك الشخصي 🏷️", "وصفي غرضاً في غرفتك بخمس حواس 🔍", "ابحثي عن تطبيق مفتوح المصدر (FOSS) مفيد 📱", "تعلمي كيفية إيقاف الإشعارات المزعجة 📵", "اكتبي 'كوداً' بالورقة يصف روتينك الصباحي 💻", "لخصي رؤية الإمارات للأسرة في ثلاث جمل 🇦🇪", "صممي واجهة تطبيق (UI) بسيطة على الورق 🎨", "تعلمي كشف الخبر الزائف على الإنترنت 🚫", "اكتبي نصيحة لتقليل 'وقت الشاشة' بطريقة ممتعة 📱"]; // إغلاق المصفوفة بشكل صحيح
+			function generateTask() {
+				const textElement = document.getElementById('taskText');
+				const displayDiv = document.getElementById('displayArea');
+				// تأثير الانتظار
+				textElement.innerText = "جاري اختيار تحدي ذكي...";
+				textElement.className = "text-indigo-400 italic animate-pulse text-xl";
+				displayDiv.className = "border-2 border-dashed border-indigo-500 rounded-2xl p-8 mb-8 min-h-[140px] flex items-center justify-center bg-indigo-50 transition-all duration-300";
+				setTimeout(() => {
+					const randomIndex = Math.floor(Math.random() * humanTasks.length);
+					textElement.innerText = humanTasks[randomIndex];
+					textElement.className = "text-indigo-900 font-bold text-2xl animate-bounce leading-relaxed";
+					displayDiv.className = "border-2 border-solid border-indigo-600 rounded-2xl p-8 mb-8 min-h-[140px] flex items-center justify-center bg-indigo-100 shadow-inner transition-all duration-300";
+				}, 800);
+			}
+			</script>
+			<section id="challenge" class="py-20 bg-gradient-to-b from-indigo-50 to-white"> </section>
+		</section>
+		<section id="padlet-section" class="py-20 bg-slate-50">
+			<div class="max-w-7xl mx-auto px-4">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl font-bold text-indigo-900 mb-4 italic">مساحة للبوح الرقمي</h2>
+					<p class="text-slate-600 max-w-2xl mx-auto leading-relaxed"> هنا نترك الشاشات جانباً لنستمع إلى صوت العقل. شاركونا تجاربكم، تحدياتكم، ولحظات انتصاركم على التشتت الرقمي. كلماتكم هي الدليل على أن الإرادة البشرية تظل دائماً فوق كل خوارزمية. </p>
+				</div>
+				<div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+					<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4">
+						<p style="padding:0;margin:0">
+							<iframe src="https://padlet.com/embed/ftyr194kumlztsli" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe>
+						</p>
+						<div style="display:flex;align-items:center;justify-content:end;margin:0;padding:8px 8px 8px 0">
+							<a href="https://padlet.com?ref=embed" target="_blank"> <img src="https://padlet.net/emails/padlet_email_logo_2026_text-dark-200.png" width="12" style="padding:0;margin:0;border:none;box-shadow:none;display:block" alt="Made with Padlet"> </a>
+						</div>
+					</div>
+				</div>
+				<p class="text-center mt-6 text-sm text-slate-400 italic"> * اضغطي على علامة (+) داخل اللوحة لإضافة مشاركتك البشرية. </p>
+			</div>
+		</section>
+		
+		<section id="creations" class="py-20 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
         
-        <p class="text-center mt-6 text-sm text-slate-400 italic">
-            * اضغطي على علامة (+) داخل اللوحة لإضافة مشاركتك البشرية.
-        </p>
-    </div>
-	
-	
-
-
-</section>
-    <!-- Team Section -->
-    <section id="team" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold text-indigo-900 mb-12 italic">فريق العمل (عقولٌ تصنع)</h2>
-            <div class="overflow-x-auto">
-                <table class="w-full max-w-2xl mx-auto bg-white rounded-2xl overflow-hidden shadow-xl border border-slate-200">
-                    <thead class="bg-indigo-900 text-white">
-                        <tr>
-                            <th class="py-4 px-6 text-center text-lg">الاسم</th>
-                            <th class="py-4 px-6 text-center text-lg border-r border-indigo-800">دوري في المجموعة</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-slate-700">
-                        <tr class="border-b border-slate-100 hover:bg-slate-50 transition">
-                            <td class="py-4 px-6 font-medium">نادين أحمد</td>
-                            <td class="py-4 px-6 border-r border-slate-100 font-bold text-indigo-600 underline">قائد الفريق</td>
-                        </tr>
-                        <tr class="bg-indigo-50/30 border-b border-slate-100 hover:bg-slate-50 transition">
-                            <td class="py-4 px-6 font-medium">طيف عبدالله</td>
-                            <td class="py-4 px-6 border-r border-slate-100">المساعد</td>
-                        </tr>
-                        <tr class="border-b border-slate-100 hover:bg-slate-50 transition">
-                            <td class="py-4 px-6 font-medium">اسماء عبدالله</td>
-                            <td class="py-4 px-6 border-r border-slate-100">منظم العمل</td>
-                        </tr>
-                        <tr class="bg-indigo-50/30 border-b border-slate-100 hover:bg-slate-50 transition">
-                            <td class="py-4 px-6 font-medium">ميرة علي حسن</td>
-                            <td class="py-4 px-6 border-r border-slate-100 text-amber-600 font-bold">الإخراج العام</td>
-                        </tr>
-                        <tr class="border-b border-slate-100 hover:bg-slate-50 transition">
-                            <td class="py-4 px-6 font-medium">رسمية راشد</td>
-                            <td class="py-4 px-6 border-r border-slate-100">مسجل المعلومات</td>
-                        </tr>
-                        
-                        <tr class="hover:bg-slate-50 transition">
-                            <td class="py-4 px-6 font-medium">جنى وليد</td>
-                            <td class="py-4 px-6 border-r border-slate-100 text-emerald-600">منظم الوقت</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="order-2 lg:order-1 space-y-8 text-right">
+                <div>
+                    <span class="inline-block px-5 py-2 bg-emerald-50 text-emerald-600 rounded-2xl text-sm font-bold border border-emerald-100 mb-4">🌟 إبداعات طلابية</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-indigo-950 leading-tight italic">
+                        عندما يتحول وقت الفراغ <br> إلى <span class="text-indigo-600">ابتكار ومتعة</span>
+                    </h2>
+                </div>
+                
+                <p class="text-xl text-slate-600 leading-loose">
+تمثّلت أبرز مبادراتنا في الحدّ من الاستخدام المفرط للتكنولوجيا في المدرسة في العناية بحديقة المدرسة، من خلال زراعة الشتلات وريّها، إضافة إلى إعادة تدوير بعض المواد. وقد أسهمت هذه الأنشطة في استثمار أوقات الفراغ وحصص الاحتياط وفترات الاستراحة (البريك) بشكل نافع، وتعزيز التفاعل الواقعي والعمل الجماعي بين الطالبات                </p>
+                
+                <div class="flex flex-wrap gap-6">
+                    <div class="flex items-center gap-3 text-indigo-950 font-bold bg-slate-50 px-4 py-2 rounded-xl">
+                        <span class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-xs">✓</span>
+                        تفكير نقدي
+                    </div>
+                    <div class="flex items-center gap-3 text-indigo-950 font-bold bg-slate-50 px-4 py-2 rounded-xl">
+                        <span class="w-8 h-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center text-xs">✓</span>
+                        حلول مبتكرة
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-	
-	    <!-- Sheikh Mohammed Quote Section -->
-    <section class="py-16 bg-white border-y border-slate-100">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="text-4xl text-indigo-200 mb-6 italic font-serif">"</div>
-            <p class="text-2xl md:text-3xl font-bold text-slate-800 mb-6 leading-relaxed">
-                "المستقبل لا ينتظر أحداً، وصناعة المستقبل لا تعتمد على التقنية وحدها بل على العقول التي تدير هذه التقنية وتبدع من خلالها."
-            </p>
-            <p class="text-indigo-600 font-bold text-lg">— صاحب السمو الشيخ محمد بن راشد آل مكتوم</p>
-            <div class="text-4xl text-indigo-200 mt-6 italic font-serif transform rotate-180">"</div>
-        </div>
-	
-	<!-- References & UAE Role Section -->
-<section id="references" class="py-20 bg-slate-100">
-    <div class="max-w-6xl mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-indigo-900 mb-4 italic">المصادر والمراجع العلمية</h2>
-            <p class="text-slate-600">اعتمدنا في الإحصاءات والتحليلات على تقارير ودراسات دولية موثوقة</p>
-        </div>
 
-        <div class="bg-white p-8 rounded-2xl shadow-lg space-y-4 text-slate-700 leading-relaxed text-sm">
-            <p>• تقرير <strong>Digital 2024 Global Overview Report</strong> الصادر عن We Are Social & Meltwater حول معدلات استخدام الإنترنت والشاشات عالميًا.</p>
-            <p>• تقرير <strong>UNESCO Global Education Monitoring Report</strong> حول تأثير التكنولوجيا على التعليم ومهارات التفكير.</p>
-            <p>• دراسة من <strong>American Psychological Association (APA)</strong> حول تأثير التشتت الرقمي على مدى الانتباه.</p>
-            <p>• تقرير <strong>OECD Future of Education and Skills 2030</strong> حول مهارات التفكير النقدي في العصر الرقمي.</p>
-            <p>• إحصاءات <strong>DataReportal</strong> حول متوسط عدد ساعات استخدام الإنترنت يوميًا للمراهقين.</p>
+            <div class="order-1 lg:order-2 grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                    <div class="rounded-[2rem] overflow-hidden shadow-xl border-4 border-white rotate-1 hover:rotate-0 transition-transform duration-500">
+                        <img src="1.jpg" alt="ابتكار 1" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="rounded-[2rem] overflow-hidden shadow-xl border-4 border-white -rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img src="2.jpg" alt="ابتكار 2" class="w-full h-64 object-cover">
+                    </div>
+                </div>
+                <div class="space-y-4 pt-10">
+                    <div class="rounded-[2rem] overflow-hidden shadow-xl border-4 border-white -rotate-1 hover:rotate-0 transition-transform duration-500">
+                        <img src="3.jpg" alt="ابتكار 3" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="rounded-[2rem] overflow-hidden shadow-xl border-4 border-white rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img src="4.jpg" alt="ابتكار 4" class="w-full h-48 object-cover">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
-
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 py-12 text-white border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="mb-2 font-bold text-indigo-400">مدرسة الفجيرة للتعليم الأساسي 2 - طالبات الصف الثامن</p>
-            <p class="text-slate-500 text-sm italic">"عقلك هو القائد والتقنية هي الوسيلة - جميع الحقوق محفوظة © 2025"</p>
-        </div>
-    </footer>
-
-    <script>
-const ctx = document.getElementById('skillsChart').getContext('2d');
-const skillsChart = new Chart(ctx, {
-    type: 'bar', // تغيير النوع إلى عامودي
-    data: {
-        labels: ['2010', '2015', '2020', '2025', '2026'], // سنوات المقارنة
-        datasets: [
-            {
-                label: 'القدرة الذهنية والتركيز',
-                data: [90, 75, 60, 45, 40], // أرقام توضح التراجع
-                backgroundColor: '#4f46e5', // لون إنديجو
-                borderRadius: 8, // حواف دائرية للأعمدة
-                barThickness: 25 // سمك العمود
-            },
-            {
-                label: 'الاعتماد التقني',
-                data: [20, 40, 70, 90, 95], // أرقام توضح التصاعد
-                backgroundColor: '#f59e0b', // لون كهرماني
-                borderRadius: 8,
-                barThickness: 25
-            }
-        ]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-            legend: {
-                display: false // إخفاء الليجند لأننا صممنا واحد يدوي في الـ HTML
-            }
-        },
-        scales: {
-            y: {
-                beginAtZero: true,
-                max: 100,
-                grid: {
-                    color: '#f1f5f9' // لون خطوط الشبكة خفيف جداً
-                },
-                ticks: {
-                    callback: function(value) { return value + '%'; }
-                }
-            },
-            x: {
-                grid: {
-                    display: false // إخفاء خطوط الطول ليكون الشكل أنظف
-                }
-            }
-        },
-        animation: {
-            duration: 2000,
-            easing: 'easeOutQuart'
-        }
-    }
-});
-    </script>
-</body>
-</html>
+		<!-- Sheikh Mohammed Quote Section -->
+		<section class="py-16 bg-white border-y border-slate-100">
+			<div class="max-w-4xl mx-auto px-4 text-center">
+				<div class="text-4xl text-indigo-200 mb-6 italic font-serif">"</div>
+				<p class="text-2xl md:text-3xl font-bold text-slate-800 mb-6 leading-relaxed"> "المستقبل لا ينتظر أحداً، وصناعة المستقبل لا تعتمد على التقنية وحدها بل على العقول التي تدير هذه التقنية وتبدع من خلالها." </p>
+				<p class="text-indigo-600 font-bold text-lg">— صاحب السمو الشيخ محمد بن راشد آل مكتوم</p>
+				<div class="text-4xl text-indigo-200 mt-6 italic font-serif transform rotate-180">"</div>
+			</div>
+			
+		<!-- Team Section -->
+		<section id="team" class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 text-center">
+				<h2 class="text-3xl font-bold text-indigo-900 mb-12 italic">فريق العمل (عقولٌ تصنع)</h2>
+				<div class="overflow-x-auto">
+					<table class="w-full max-w-2xl mx-auto bg-white rounded-2xl overflow-hidden shadow-xl border border-slate-200">
+						<thead class="bg-indigo-900 text-white">
+							<tr>
+								<th class="py-4 px-6 text-center text-lg">الاسم</th>
+								<th class="py-4 px-6 text-center text-lg border-r border-indigo-800">دوري في المجموعة</th>
+							</tr>
+						</thead>
+						<tbody class="text-slate-700">
+							<tr class="border-b border-slate-100 hover:bg-slate-50 transition">
+								<td class="py-4 px-6 font-medium">نادين أحمد</td>
+								<td class="py-4 px-6 border-r border-slate-100 font-bold text-indigo-600 underline">منسق المشروع</td>
+							</tr>
+							<tr class="bg-indigo-50/30 border-b border-slate-100 hover:bg-slate-50 transition">
+								<td class="py-4 px-6 font-medium">طيف عبدالله</td>
+								<td class="py-4 px-6 border-r border-slate-100">كاتب المقالات</td>
+							</tr>
+							<tr class="border-b border-slate-100 hover:bg-slate-50 transition">
+								<td class="py-4 px-6 font-medium">اسماء عبدالله</td>
+								<td class="py-4 px-6 border-r border-slate-100">مصمم العرض</td>
+							</tr>
+							<tr class="bg-indigo-50/30 border-b border-slate-100 hover:bg-slate-50 transition">
+								<td class="py-4 px-6 font-medium">ميرة علي حسن</td>
+								<td class="py-4 px-6 border-r border-slate-100 text-amber-600 font-bold">الباحث في الشبكات المعلوماتية</td>
+							</tr>
+							<tr class="border-b border-slate-100 hover:bg-slate-50 transition">
+								<td class="py-4 px-6 font-medium">رسمية راشد</td>
+								<td class="py-4 px-6 border-r border-slate-100">مسجل المعلومات</td>
+							</tr>
+							<tr class="hover:bg-slate-50 transition">
+								<td class="py-4 px-6 font-medium">جنى وليد</td>
+								<td class="py-4 px-6 border-r border-slate-100 text-emerald-600">محرر الصور والمخرجات التعليمية</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+			<!-- References & UAE Role Section -->
+			<section id="references" class="py-20 bg-slate-100">
+				<div class="max-w-6xl mx-auto px-4">
+					<div class="text-center mb-12">
+						<h2 class="text-3xl font-bold text-indigo-900 mb-4 italic">المصادر والمراجع العلمية</h2>
+						<p class="text-slate-600">اعتمدنا في الإحصاءات والتحليلات على تقارير ودراسات دولية موثوقة</p>
+					</div>
+					<div class="bg-white p-8 rounded-2xl shadow-lg space-y-4 text-slate-700 leading-relaxed text-sm">
+						<p>• تقرير <strong>Digital 2024 Global Overview Report</strong> الصادر عن We Are Social & Meltwater حول معدلات استخدام الإنترنت والشاشات عالميًا.</p>
+						<p>• تقرير <strong>UNESCO Global Education Monitoring Report</strong> حول تأثير التكنولوجيا على التعليم ومهارات التفكير.</p>
+						<p>• دراسة من <strong>American Psychological Association (APA)</strong> حول تأثير التشتت الرقمي على مدى الانتباه.</p>
+						<p>• تقرير <strong>OECD Future of Education and Skills 2030</strong> حول مهارات التفكير النقدي في العصر الرقمي.</p>
+						<p>• إحصاءات <strong>DataReportal</strong> حول متوسط عدد ساعات استخدام الإنترنت يوميًا للمراهقين.</p>
+					</div>
+				</div>
+			</section>
+			<!-- Footer -->
+			<footer class="bg-slate-900 py-12 text-white border-t border-slate-800">
+				<div class="max-w-7xl mx-auto px-4 text-center">
+					<p class="mb-2 font-bold text-indigo-400">مدرسة الفجيرة للتعليم الأساسي 2 - طالبات الصف الثامن</p>
+					<p class="text-slate-500 text-sm italic">"عقلك هو القائد والتقنية هي الوسيلة - جميع الحقوق محفوظة © 2025"</p>
+				</div>
+			</footer>
+<script>
+const chartElement = document.getElementById('skillsChart');
+if (chartElement) {
+    const ctx = chartElement.getContext('2d');
+    const skillsChart = new Chart(ctx, {
+        ...
+    });
+}
+</script>
+<footer>
